@@ -1,0 +1,15 @@
+@keyframes carousel-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.carousel-gallery-left {
+  animation: carousel-left 25s linear infinite;
+  &:hover{
+    animation-play-state: paused;
+  }
+}

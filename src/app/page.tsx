@@ -7,7 +7,7 @@ import Hero from "./_features/home/sections/Hero";
 import SwiperCategories from "./_features/home/sections/SwiperCategories";
 
 export default function Home() {
-
+  
   return (
     <div className="min-h-screen">
       <Hero />
@@ -24,10 +24,7 @@ export default function Home() {
               {products.map(
                 (product, index) =>
                   index < 4 && (
-                    <CardProduct
-                      key={product.id}
-                      product={product}
-                    />
+                    <CardProduct key={product.id} product={product} />
                   ),
               )}
             </div>
@@ -68,10 +65,7 @@ export default function Home() {
               {products.map(
                 (product, index) =>
                   index >= 4 && (
-                    <CardProduct
-                      key={product.id}
-                      product={product}
-                    />
+                    <CardProduct key={product.id} product={product} />
                   ),
               )}
             </div>

@@ -83,9 +83,9 @@ export default function CardProduct({ product }: { product: Product }) {
             });
             setShoppingCart(newList);
           }}
-          className="w-full py-2 border-rose-400 mt-4 duration-200 hover:bg-rose-400 hover:text-white flex items-center gap-2 justify-center  text-rose-400 font-medium cursor-pointer border-1 text-center rounded-lg"
+          className="w-full py-2 border-rose-400 mt-4 duration-200 hover:bg-rose-400 hover:text-white flex text-sm md:text-base items-center gap-2 justify-center  text-rose-400 font-medium cursor-pointer border-1 text-center rounded-lg"
         >
-          Agregar al carrito <RiShoppingCartLine className="text-lg" />
+          Agregar al carrito <RiShoppingCartLine className="text-lg hidden sm:flex" />
         </button>
       </div>
     </div>

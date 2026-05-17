@@ -1,4 +1,5 @@
 import ContainerWidth from "@/app/_components/ContainerWidth";
+import CountUp from "@/app/_components/CountUp";
 import Image from "next/image";
 
 export default function About() {
@@ -16,23 +17,13 @@ export default function About() {
                 src="/vivian-about.webp"
                 className="w-full h-96 object-cover rounded-2xl object-top"
               />
-              <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-xl p-6">
-                <div className="text-center">
-                  <span className="text-4xl font-bold text-rose-500 font-[ui-serif]">5+</span>
-                  <p className="text-gray-600 text-sm font-dm-sans">
-                    Años de
-                    <br />
-                    experiencia
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
           <div>
             <span className="text-rose-600  font-dm-sans text-sm font-bold tracking-wider uppercase">
               Viviana Mayora
             </span>
-            <h2 className="text-4xl md:text-6xl  font-[ui-serif] font-bold text-gray-800 mt-2 mb-6">
+            <h2 className="text-4xl md:text-6xl  font-[ui-serif] text-gray-800 mt-2 mb-6">
               Pasión por la Repostería
             </h2>
             <div className="space-y-4 text-gray-600 font-dm-sans text-lg leading-relaxed">
@@ -56,39 +47,41 @@ export default function About() {
               </p>
             </div>
             {/* Features */}
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-rose-100 rounded-full flex items-center justify-center">
-                  <span className="text-rose-500">✓</span>
+            <div className="mt-8 grid grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="flex flex-col justify-center items-center gap-3">
+                <div className="">
+                  <span className="text-rose-600 flex justify-center items-center font-[ui-sans] text-3xl md:text-5xl font-bold">
+                    <CountUp from={0} to={5} />
+                    <span className="text-3xl ">+</span>
+                  </span>
                 </div>
-                <span className="text-gray-700 font-medium">
-                  Ingredientes Premium
+                <span className="text-gray-700 font-dm-sans font-semibold">
+                  Años de Trayectoria
                 </span>
               </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-rose-100 rounded-full flex items-center justify-center">
-                  <span className="text-rose-500">✓</span>
+              <div className="flex flex-col justify-center items-center gap-3">
+                <div className="">
+                  <span className="text-rose-600 flex justify-center items-center font-[ui-sans] text-3xl md:text-5xl font-bold">
+                    <CountUp from={0} to={100} />
+                    <span className="text-3xl ">%</span>
+                  </span>
                 </div>
-                <span className="text-gray-700 font-medium">100% Casero</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-rose-100 rounded-full flex items-center justify-center">
-                  <span className="text-rose-500">✓</span>
-                </div>
-                <span className="text-gray-700 font-medium">
-                  Envío a Domicilio
+                <span className="text-gray-700 font-dm-sans font-semibold">
+                  Productos Caseros
                 </span>
               </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-rose-100 rounded-full flex items-center justify-center">
-                  <span className="text-rose-500">✓</span>
+              <div className="flex flex-col justify-center items-center gap-3">
+                <div className="">
+                  <span className="text-rose-600 flex justify-center items-center font-[ui-sans] text-3xl md:text-5xl font-bold">
+                    <CountUp from={0} to={200} />
+                    <span className="text-3xl ">+</span>
+                  </span>
                 </div>
-                <span className="text-gray-700 font-medium">
-                  Diseños Personalizados
+                <span className="text-gray-700 font-dm-sans font-semibold">
+                  Clientes Satisfechos
                 </span>
               </div>
             </div>
-
           </div>
         </div>
       </ContainerWidth>

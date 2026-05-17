@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { Service } from "../type/service.type";
+import Image from "next/image";
 
 export default function CardService({ service }: { service: Service }) {
   return (
     <div key={service.id} className="">
       <div className="relative overflow-hidden w-full aspect-[1]  rounded-full group">
-        <img
+        <Image
           src={service.urlImage}
           alt={service.name}
+          fill
           className=" h-full w-full duration-300 object-cover group-hover:scale-[1.1]"
         />
       </div>

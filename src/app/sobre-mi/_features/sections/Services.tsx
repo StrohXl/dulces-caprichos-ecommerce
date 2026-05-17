@@ -11,7 +11,7 @@ export default function Services() {
           <span className="text-rose-600 text-sm font-bold font-dm-sans tracking-wider uppercase">
             Lo que ofrezco
           </span>
-          <h2 className="text-4xl md:text-6xl font-[ui-serif] font-bold text-gray-800 mt-2">
+          <h2 className="text-4xl md:text-6xl font-[ui-serif]  text-gray-800 mt-2">
             Mis Servicios
           </h2>
           <p className="text-gray-600 mt-4 max-w-2xl font-dm-sans mx-auto">
@@ -20,8 +20,14 @@ export default function Services() {
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 justify-center lg:grid-cols-5 gap-8 lg:gap-12">
-          {services.map((service) => (
-            <CardService service={service} key={service.id} />
+          {services.map((service, index) => (
+            <div
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+              key={service.id}
+            >
+              <CardService service={service} />
+            </div>
           ))}
         </div>
         <div className="flex justify-center mt-8">

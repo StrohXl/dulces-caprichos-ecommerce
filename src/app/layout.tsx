@@ -5,6 +5,7 @@ import Header from "./_features/header/Header";
 import Footer from "./_features/footer/Footer";
 import ContextLayout from "./hooks/contextLayout";
 
+
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
@@ -20,6 +21,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html
       lang="en"

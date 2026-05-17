@@ -2,68 +2,46 @@
 
 import ButtonEffect from "@/app/_components/buttons/ButtonEffect";
 import ContainerWidth from "@/app/_components/ContainerWidth";
-import SwiperFather from "@/app/_components/SwiperFather";
-import { gallery } from "@/app/_data/gallery";
-import Image from "next/image";
+import CarouselGallery from "@/app/_features/gallery/components/CarouselGallery";
 import Link from "next/link";
-import { SwiperSlide } from "swiper/react";
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="py-10 md:py-20 px-4 bg-white text-center">
+    <section
+      id="gallery"
+      className="py-10 md:py-20 px-4 bg-white text-center md:text-start"
+    >
       <ContainerWidth>
-        <h2 className="text-2xl md:text-6xl font-bold text-gray-800 font-[ui-sans] mb-6">
-          Galería de Productos
-        </h2>
-        <p className="font-md-sans max-w-[400px] mx-auto text-gray-600">
-          Descubre una selección de mis creaciones más deliciosas y hermosas.
-        </p>
-        <div className="mt-8 mb-4">
-          <SwiperFather
-            props={{
-              pagination: {
-                bulletActiveClass: "bg-rose-800! opacity-100!",
-                clickable: true,
-              },
-              wrapperClass: "pb-10",
-
-              breakpoints: {
-                300: {
-                  slidesPerView: 1.4,
-                  spaceBetween: 16,
-                },
-                600: {
-                  slidesPerView: 2.4,
-                  spaceBetween: 16,
-                },
-                900: {
-                  slidesPerView: 3.4,
-                  spaceBetween: 16,
-                },
-              },
-            }}
-          >
-            {gallery.map((item) => (
-              <SwiperSlide key={item.id}>
-                <div className="w-full aspect-[1.5] rounded-xl overflow-hidden relative">
-                  <Image
-                    src={item.imageUrl}
-                    fill
-                    alt={item.title}
-                    className="object-cover"
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-          </SwiperFather>
-        </div>
-        <div className="flex justify-center">
-
-          <ButtonEffect>
-            <Link href="/galeria" className="block w-full h-full">
-              Ver toda la galería
-            </Link>
-          </ButtonEffect>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center">
+          <div>
+            <span className="text-rose-600 text-sm font-bold block mb-6 font-dm-sans uppercase">
+              Mi Galería
+            </span>
+            <h2 className="text-4xl md:text-6xl max-w-lg  text-gray-800 font-[ui-sans]">
+              Explora mi Galería de Creaciones
+            </h2>
+            <p className="font-md-sans max-w-xl text-lg text-gray-700 my-6 md:my-12">
+              Explora el universo de mis pasteles y cupcakes personalizados,
+              donde cada diseño refleja mi amor por la repostería.
+            </p>
+            <div className="hidden md:flex justify-center md:justify-start">
+              <ButtonEffect>
+                <Link href="/galeria" className="block w-full h-full">
+                  Ver toda la galería
+                </Link>
+              </ButtonEffect>
+            </div>
+          </div>
+          <div className="w-full">
+            <CarouselGallery />
+          </div>
+          <div className="flex md:hidden justify-center mt-6">
+            <ButtonEffect>
+              <Link href="/galeria" className="block w-full h-full">
+                Ver toda la galería
+              </Link>
+            </ButtonEffect>
+          </div>
         </div>
       </ContainerWidth>
     </section>
