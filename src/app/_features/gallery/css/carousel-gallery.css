@@ -13,3 +13,7 @@
     animation-play-state: paused;
   }
 }
+
+.carousel-gallery-stop{
+  animation-play-state: paused;
+}

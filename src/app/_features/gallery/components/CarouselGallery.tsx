@@ -1,4 +1,3 @@
-import useFancybox from "@/app/_components/UseFancybox";
 import "../css/carousel-gallery.css";
 import Image from "next/image";
 
@@ -29,33 +28,19 @@ export default function CarouselGallery() {
         <CarouselGalleryWrapper
           direction="left"
           carouselImages={imagesReverse}
-          nameGallery="gallery-1"
         />
       </div>
       <div style={{ marginLeft: `${widthCard / 2}px` }}>
-        <CarouselGalleryWrapper
-          direction="left"
-          carouselImages={images}
-          nameGallery="gallery-2"
-        />
+        <CarouselGalleryWrapper direction="left" carouselImages={images} />
       </div>
-      <CarouselGalleryWrapper
-        direction="left"
-        carouselImages={imagesReverse}
-        nameGallery="gallery-3"
-      />
+      <CarouselGalleryWrapper direction="left" carouselImages={imagesReverse} />
       <div style={{ marginLeft: `${widthCard / 2}px` }}>
-        <CarouselGalleryWrapper
-          direction="left"
-          carouselImages={images}
-          nameGallery="gallery-4"
-        />
+        <CarouselGalleryWrapper direction="left" carouselImages={images} />
       </div>
       <div style={{ marginLeft: `${widthCard}px` }}>
         <CarouselGalleryWrapper
           direction="left"
           carouselImages={imagesReverse}
-          nameGallery="gallery-5"
         />
       </div>
     </div>
@@ -65,26 +50,20 @@ export default function CarouselGallery() {
 const CarouselGalleryWrapper = ({
   carouselImages,
   direction,
-  nameGallery = "gallery",
 }: {
   carouselImages: string[];
   direction: "left" | "right";
-  nameGallery?: string;
 }) => {
-  const [fancyboxRef] = useFancybox({
-    // Your custom options
-  });
   const widthWrapper = carouselImages.length * widthCard * 2;
   return (
     <div
-      ref={fancyboxRef}
       style={{
         width: `${widthWrapper}px`,
       }}
       className={`carousel-gallery-wrapper carousel-gallery-${direction} flex`}
     >
       {carouselImages.map((src, index) => (
-        <CardGallery nameGallery={nameGallery} src={src} key={index} />
+        <CardGallery src={src} key={index} />
       ))}
       {carouselImages.map((src, index) => (
         <CardGallery src={src} key={index} />
@@ -93,27 +72,16 @@ const CarouselGalleryWrapper = ({
   );
 };
 
-const CardGallery = ({
-  src,
-  nameGallery = "gallery",
-}: {
-  src: string;
-  nameGallery?: string;
-}) => {
+const CardGallery = ({ src }: { src: string }) => {
   return (
     <div
-      style={{ width: `${widthCard}px`, height: `${heightCard}px` }}
-      className={`w-[${widthCard}px] h-[${heightCard}px] relative overflow-hidden`}
+      style={{
+        width: `${widthCard}px`,
+        height: `${heightCard}px`,
+      }}
+      className={`relative overflow-hidden`}
     >
-      <a href={src} data-fancybox={nameGallery}>
-        <Image
-          src={src}
-          alt={src}
-          fill
-          quality={10}
-          className="object-cover cursor-pointer"
-        />
-      </a>
+      <Image src={src} alt={src} fill className="object-cover" />
     </div>
   );
 };
