@@ -32,7 +32,7 @@ export default function Gallery() {
               </ButtonEffect>
             </div>
           </div>
-          <div className="w-full">
+          <div className="w-full relative">
             <CarouselGallery />
           </div>
           <div className="flex md:hidden justify-center mt-6">
