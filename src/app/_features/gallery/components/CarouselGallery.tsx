@@ -3,19 +3,61 @@ import Image from "next/image";
 
 const widthCard = 130;
 const heightCard = 80;
-const images = [
-  "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
-  "https://images.unsplash.com/photo-1493246507139-91e8fad9978e",
-  "https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-  "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
-  "https://images.unsplash.com/photo-1526045612212-70caf35c14df",
-  "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
-  "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
-  "https://images.unsplash.com/photo-1517841905240-472988babdf9",
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
-  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+
+const carousel_1 = [
+  "/products/torta-pina.jpg",
+  "/products/tortaquesillo.jpg",
+  "/products/quesillo.png",
+  "/products/carrot-cake.jpg",
+  "/products/red-velvet.jpg",
+  "/products/matilda.jpg",
+  "/products/capitas.jpg",
+  "/products/tres-leches.jpg",
 ];
-const imagesReverse = images.slice().reverse();
+
+const carousel_2 = [
+  "/products/beso-de-angel.jpg",
+  "/products/cuchareables.jpg",
+  "/products/brownies.jpg",
+  "/products/galleta-clasica.jpg",
+  "/products/galleta-red-velvet.jpg",
+  "/products/galleta-triple-chocolate.jpg",
+  "/products/maxi-alfajores.jpg",
+  "/products/mini-dulces.jpg",
+];
+
+const carousel_3 = [
+  "/products/ponquesitos.jpg",
+  "/products/torta-pina.jpg",
+  "/products/tortaquesillo.jpg",
+  "/products/quesillo.png",
+  "/products/carrot-cake.jpg",
+  "/products/red-velvet.jpg",
+  "/products/matilda.jpg",
+  "/products/capitas.jpg",
+];
+
+const carousel_4 = [
+  "/products/tres-leches.jpg",
+  "/products/beso-de-angel.jpg",
+  "/products/cuchareables.jpg",
+  "/products/brownies.jpg",
+  "/products/galleta-clasica.jpg",
+  "/products/galleta-red-velvet.jpg",
+  "/products/galleta-triple-chocolate.jpg",
+  "/products/maxi-alfajores.jpg",
+];
+
+const carousel_5 = [
+  "/products/mini-dulces.jpg",
+  "/products/ponquesitos.jpg",
+  "/products/torta-pina.jpg",
+  "/products/tortaquesillo.jpg",
+  "/products/quesillo.png",
+  "/products/carrot-cake.jpg",
+  "/products/red-velvet.jpg",
+  "/products/matilda.jpg",
+];
 
 export default function CarouselGallery() {
   return (
@@ -27,20 +69,20 @@ export default function CarouselGallery() {
       <div style={{ marginLeft: `${widthCard}px` }}>
         <CarouselGalleryWrapper
           direction="left"
-          carouselImages={imagesReverse}
+          carouselImages={carousel_1}
         />
       </div>
       <div style={{ marginLeft: `${widthCard / 2}px` }}>
-        <CarouselGalleryWrapper direction="left" carouselImages={images} />
+        <CarouselGalleryWrapper direction="left" carouselImages={carousel_2} />
       </div>
-      <CarouselGalleryWrapper direction="left" carouselImages={imagesReverse} />
+      <CarouselGalleryWrapper direction="left" carouselImages={carousel_3} />
       <div style={{ marginLeft: `${widthCard / 2}px` }}>
-        <CarouselGalleryWrapper direction="left" carouselImages={images} />
+        <CarouselGalleryWrapper direction="left" carouselImages={carousel_4} />
       </div>
       <div style={{ marginLeft: `${widthCard}px` }}>
         <CarouselGalleryWrapper
           direction="left"
-          carouselImages={imagesReverse}
+          carouselImages={carousel_5}
         />
       </div>
     </div>

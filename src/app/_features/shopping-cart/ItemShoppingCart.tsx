@@ -42,7 +42,7 @@ export default function ItemShoppingCart({
             src={product.image}
             fill
             alt={product.name}
-            className="rounded-lg"
+            className="rounded-full object-cover"
           />
         </Link>
       </div>
@@ -70,7 +70,7 @@ export default function ItemShoppingCart({
       <div className="flex flex-col">
         <div className="text-center flex gap-2 items-center justify-end">
           <button
-            className="text-[12px] cursor-pointer border-1 border-gray-400 h-[25px] w-[25px] rounded-sm flex items-center justify-center"
+            className="text-sm cursor-pointer border-1 border-gray-400 h-[30px] w-[30px] rounded-sm flex items-center justify-center"
             onClick={() => {
               const newList = minusProductShoppingCart({
                 idProduct: product.id,
@@ -81,9 +81,9 @@ export default function ItemShoppingCart({
           >
             <FaMinus />
           </button>
-          <span className="w-[30px]">{product.quantity}</span>
+          <span className="w-[30px] font-dm-sans">{product.quantity}</span>
           <button
-            className="text-[12px] cursor-pointer border-1 border-gray-400 h-[25px] w-[25px] rounded-sm flex items-center justify-center"
+            className="text-sm cursor-pointer border-1 border-gray-400 h-[30px] w-[30px] rounded-sm flex items-center justify-center"
             onClick={() => {
               const newList = plusProductShoppingCart({
                 idProduct: product.id,

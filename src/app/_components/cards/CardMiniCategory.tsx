@@ -10,7 +10,7 @@ export default function CardMiniCategory({ category }: { category: Category }) {
           id: category.id
         }
       }}
-      className="flex flex-col card-mini-category duration-300 hover:shadow-rose-700/50 items-center justify-center px-4 md:px-6 py-6 h-full bg-white rounded-xl hover:shadow-md shadow-sm "
+      className="flex flex-col card-mini-category duration-300 hover:shadow-rose-700/50 items-center justify-center px-4 py-6 h-full bg-white rounded-xl hover:shadow-md shadow-sm "
       scroll={true}
     >
       <div className="text-4xl md:text-5xl text-rose-400">

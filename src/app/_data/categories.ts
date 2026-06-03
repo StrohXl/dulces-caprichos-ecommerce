@@ -1,71 +1,56 @@
-import { FaCakeCandles } from "react-icons/fa6";
-import { LuDessert } from "react-icons/lu";
+import { BsCake2Fill } from "react-icons/bs";
 import { Category } from "../_types/category";
-
+import { GiCakeSlice, GiCookie, GiCupcake } from "react-icons/gi";
+import { MdCake } from "react-icons/md";
+import { RiCake3Fill } from "react-icons/ri";
 const categories: Category[] = [
   {
     id: 1,
-    name: "Tortas",
+    name: "Tortas clásicas",
     imageUrl: "/cake.webp",
     description: "Deliciosas tortas personalizadas para cualquier ocasión.",
-    url: "/categorias/tortas",
-    icon: FaCakeCandles,
+    url: "/categorias/tortas-clasicas",
+    icon: BsCake2Fill,
   },
   {
     id: 2,
-    name: "Postres",
+    name: "Tortas rellenas altas",
     description: "Variedad de postres caseros para endulzar tu día.",
-    url: "/categorias/postres",
-    icon: LuDessert,
+    url: "/categorias/tortas-altas",
+    icon: MdCake,
     imageUrl: "/cake.webp",
   },
   {
     id: 3,
-    name: "Cupcakes",
+    name: "Tortas frías",
     description: "Deliciosas tortas personalizadas para cualquier ocasión.",
-    url: "/categorias/tortas",
-    icon: FaCakeCandles,
+    url: "/categorias/tortas-frias",
+    icon: GiCakeSlice,
     imageUrl: "/cake.webp",
   },
   {
     id: 4,
-    name: "Sopas",
+    name: "Petit Gâteau",
     description: "Variedad de postres caseros para endulzar tu día.",
-    url: "/categorias/postres",
-    icon: LuDessert,
+    url: "/categorias/petit-gateau",
+    icon: GiCupcake,
     imageUrl: "/cake.webp",
   },
   {
     id: 5,
-    name: "Brownie",
+    name: "Galletas Style Newyork",
     description: "Deliciosas tortas personalizadas para cualquier ocasión.",
-    url: "/categorias/tortas",
-    icon: FaCakeCandles,
+    url: "/categorias/galletas-style-newyork",
+    icon: GiCookie,
     imageUrl: "/cake.webp",
   },
   {
     id: 6,
-    name: "Brazo guitano",
+    name: "Mini Dulces",
     description: "Variedad de postres caseros para endulzar tu día.",
-    url: "/categorias/postres",
+    url: "/categorias/mini-dulces",
     imageUrl: "/cake.webp",
-    icon: LuDessert,
-  },
-  {
-    id: 7,
-    name: "Arepa",
-    description: "Deliciosas tortas personalizadas para cualquier ocasión.",
-    url: "/categorias/tortas",
-    icon: FaCakeCandles,
-    imageUrl: "/cake.webp",
-  },
-  {
-    id: 8,
-    name: "Panqueca",
-    description: "Variedad de postres caseros para endulzar tu día.",
-    imageUrl: "/cake.webp",
-    url: "/categorias/postres",
-    icon: LuDessert,
+    icon: RiCake3Fill,
   },
 ];
 

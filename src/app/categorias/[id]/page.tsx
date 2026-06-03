@@ -2,6 +2,7 @@
 import BannerHero from "@/app/_components/banners/BannerHero";
 import CardProduct from "@/app/_components/cards/CardProduct";
 import ContainerWidth from "@/app/_components/ContainerWidth";
+import categories from "@/app/_data/categories";
 import products from "@/app/_data/products";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +11,7 @@ import { useParams, useSearchParams } from "next/navigation";
 export default function IdCategory() {
   const params = useParams();
   const searchParams = useSearchParams();
-  const id = searchParams.get("id");
+  const id = Number(searchParams.get("id"))
   const productsCategory = products.filter(
     (product) => product.category == Number(id),
   );
@@ -18,7 +19,7 @@ export default function IdCategory() {
   return (
     <>
       <BannerHero
-        title={params.id ? `${params.id}` : "Dulces caprichos"}
+        title={id ? `${categories[id-1].name}` : "Dulces caprichos"}
         urlImage="/cake.webp"
       />
       <div className="py-20">

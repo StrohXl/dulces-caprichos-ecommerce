@@ -18,7 +18,7 @@ const navegation: ItemNavegation[] = [
   },
 
   {
-    link: "/",
+    link: "/arma-tu-torta",
     title: "Arma tu torta",
     children: [],
   },

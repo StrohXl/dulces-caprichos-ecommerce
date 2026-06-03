@@ -1,13 +1,13 @@
 import { Product } from "../_types/product.type";
 
 const products: Product[] = [
-  {
+   {
     id: 1,
-    name: "Torta cubierta de merengue",
+    name: "Torta de piña",
     description:
-      "De altura regular con un capa de  relleno, puede ser de vainilla / chocolate con relleno de arequipe o pie de limón / parchita",
+      "Suave torta de vainilla con trozos de piña y un delicado sabor tropical, perfecta para compartir en celebraciones especiales.",
     price: 24,
-    image: "/cake.webp",
+    image: "/products/torta-pina.jpg",
     freeShipping: true,
     details: [],
     variants: [
@@ -18,45 +18,33 @@ const products: Product[] = [
             name: "Pequena 19cm",
             image: "/cake.webp",
             price: 24,
-            details: [
-              {
-                detail: "12 porciones",
-              },
-            ],
+            details: [{ detail: "12 porciones" }],
           },
           {
             name: "Mediana 23cm",
             image: "/cake.webp",
             price: 35,
-            details: [
-              {
-                detail: "18 porciones",
-              },
-            ],
+            details: [{ detail: "18 porciones" }],
           },
           {
             name: "Grande 28cm",
             image: "/cake.webp",
             price: 55,
-            details: [
-              {
-                detail: "32 porciones",
-              },
-            ],
+            details: [{ detail: "32 porciones" }],
           },
         ],
       },
     ],
     relatedProducts: [1, 2, 3, 4],
-    category: 1
+    category: 1,
   },
   {
     id: 2,
-    name: "Torta cubierta de merengue",
+    name: "Tortaquesillo",
     description:
-      "De altura regular con un capa de  relleno, puede ser de vainilla / chocolate con relleno de arequipe o pie de limón / parchita",
+      "Combinación perfecta entre una esponjosa torta y un cremoso quesillo tradicional con delicioso caramelo.",
     price: 24,
-    image: "/cake.webp",
+    image: "/products/tortaquesillo.jpg",
     freeShipping: true,
     details: [],
     variants: [
@@ -67,45 +55,33 @@ const products: Product[] = [
             name: "Pequena 19cm",
             image: "/cake.webp",
             price: 24,
-            details: [
-              {
-                detail: "12 porciones",
-              },
-            ],
+            details: [{ detail: "12 porciones" }],
           },
           {
             name: "Mediana 23cm",
             image: "/cake.webp",
             price: 35,
-            details: [
-              {
-                detail: "18 porciones",
-              },
-            ],
+            details: [{ detail: "18 porciones" }],
           },
           {
             name: "Grande 28cm",
             image: "/cake.webp",
             price: 55,
-            details: [
-              {
-                detail: "32 porciones",
-              },
-            ],
+            details: [{ detail: "32 porciones" }],
           },
         ],
       },
     ],
     relatedProducts: [1, 2, 3, 4],
-    category: 1
+    category: 1,
   },
   {
     id: 3,
-    name: "Torta cubierta de merengue",
+    name: "Quesillo",
     description:
-      "De altura regular con un capa de  relleno, puede ser de vainilla / chocolate con relleno de arequipe o pie de limón / parchita",
+      "Postre tradicional venezolano de textura cremosa y suave, bañado con un irresistible caramelo casero.",
     price: 24,
-    image: "/cake.webp",
+    image: "/products/quesillo.png",
     freeShipping: true,
     details: [],
     variants: [
@@ -116,45 +92,33 @@ const products: Product[] = [
             name: "Pequena 19cm",
             image: "/cake.webp",
             price: 24,
-            details: [
-              {
-                detail: "12 porciones",
-              },
-            ],
+            details: [{ detail: "12 porciones" }],
           },
           {
             name: "Mediana 23cm",
             image: "/cake.webp",
             price: 35,
-            details: [
-              {
-                detail: "18 porciones",
-              },
-            ],
+            details: [{ detail: "18 porciones" }],
           },
           {
             name: "Grande 28cm",
             image: "/cake.webp",
             price: 55,
-            details: [
-              {
-                detail: "32 porciones",
-              },
-            ],
+            details: [{ detail: "32 porciones" }],
           },
         ],
       },
     ],
     relatedProducts: [1, 2, 3, 4],
-    category: 3
+    category: 1,
   },
   {
     id: 4,
-    name: "Torta cubierta de merengue",
+    name: "Carrot cake",
     description:
-      "De altura regular con un capa de  relleno, puede ser de vainilla / chocolate con relleno de arequipe o pie de limón / parchita",
+      "Deliciosa torta de zanahoria especiada, húmeda y suave, cubierta con una cremosa capa de frosting.",
     price: 24,
-    image: "/cake.webp",
+    image: "/products/carrot-cake.jpg",
     freeShipping: true,
     details: [],
     variants: [
@@ -165,45 +129,33 @@ const products: Product[] = [
             name: "Pequena 19cm",
             image: "/cake.webp",
             price: 24,
-            details: [
-              {
-                detail: "12 porciones",
-              },
-            ],
+            details: [{ detail: "12 porciones" }],
           },
           {
             name: "Mediana 23cm",
             image: "/cake.webp",
             price: 35,
-            details: [
-              {
-                detail: "18 porciones",
-              },
-            ],
+            details: [{ detail: "18 porciones" }],
           },
           {
             name: "Grande 28cm",
             image: "/cake.webp",
             price: 55,
-            details: [
-              {
-                detail: "32 porciones",
-              },
-            ],
+            details: [{ detail: "32 porciones" }],
           },
         ],
       },
     ],
     relatedProducts: [1, 2, 3, 4],
-    category: 4
+    category: 2,
   },
   {
     id: 5,
-    name: "Torta cubierta de merengue",
+    name: "Red Velvet",
     description:
-      "De altura regular con un capa de  relleno, puede ser de vainilla / chocolate con relleno de arequipe o pie de limón / parchita",
+      "Elegante torta Red Velvet de intenso color rojo y suave sabor a cacao con cremosa cobertura.",
     price: 24,
-    image: "/cake.webp",
+    image: "/products/red-velvet.jpg",
     freeShipping: true,
     details: [],
     variants: [
@@ -214,45 +166,33 @@ const products: Product[] = [
             name: "Pequena 19cm",
             image: "/cake.webp",
             price: 24,
-            details: [
-              {
-                detail: "12 porciones",
-              },
-            ],
+            details: [{ detail: "12 porciones" }],
           },
           {
             name: "Mediana 23cm",
             image: "/cake.webp",
             price: 35,
-            details: [
-              {
-                detail: "18 porciones",
-              },
-            ],
+            details: [{ detail: "18 porciones" }],
           },
           {
             name: "Grande 28cm",
             image: "/cake.webp",
             price: 55,
-            details: [
-              {
-                detail: "32 porciones",
-              },
-            ],
+            details: [{ detail: "32 porciones" }],
           },
         ],
       },
     ],
     relatedProducts: [1, 2, 3, 4],
-    category: 5
+    category: 2,
   },
   {
     id: 6,
-    name: "Torta cubierta de merengue",
+    name: "Matilda",
     description:
-      "De altura regular con un capa de  relleno, puede ser de vainilla / chocolate con relleno de arequipe o pie de limón / parchita",
+      "Torta de chocolate intensa y húmeda con abundante ganache, inspirada en el clásico pastel Matilda.",
     price: 24,
-    image: "/cake.webp",
+    image: "/products/matilda.jpg",
     freeShipping: true,
     details: [],
     variants: [
@@ -263,45 +203,33 @@ const products: Product[] = [
             name: "Pequena 19cm",
             image: "/cake.webp",
             price: 24,
-            details: [
-              {
-                detail: "12 porciones",
-              },
-            ],
+            details: [{ detail: "12 porciones" }],
           },
           {
             name: "Mediana 23cm",
             image: "/cake.webp",
             price: 35,
-            details: [
-              {
-                detail: "18 porciones",
-              },
-            ],
+            details: [{ detail: "18 porciones" }],
           },
           {
             name: "Grande 28cm",
             image: "/cake.webp",
             price: 55,
-            details: [
-              {
-                detail: "32 porciones",
-              },
-            ],
+            details: [{ detail: "32 porciones" }],
           },
         ],
       },
     ],
     relatedProducts: [1, 2, 3, 4],
-    category: 6
+    category: 2,
   },
   {
     id: 7,
-    name: "Torta cubierta de merengue",
+    name: "Capitas",
     description:
-      "De altura regular con un capa de  relleno, puede ser de vainilla / chocolate con relleno de arequipe o pie de limón / parchita",
+      "Tradicional torta de múltiples capas finas rellenas con dulce de leche y delicado sabor casero.",
     price: 24,
-    image: "/cake.webp",
+    image: "/products/capitas.jpg",
     freeShipping: true,
     details: [],
     variants: [
@@ -312,45 +240,33 @@ const products: Product[] = [
             name: "Pequena 19cm",
             image: "/cake.webp",
             price: 24,
-            details: [
-              {
-                detail: "12 porciones",
-              },
-            ],
+            details: [{ detail: "12 porciones" }],
           },
           {
             name: "Mediana 23cm",
             image: "/cake.webp",
             price: 35,
-            details: [
-              {
-                detail: "18 porciones",
-              },
-            ],
+            details: [{ detail: "18 porciones" }],
           },
           {
             name: "Grande 28cm",
             image: "/cake.webp",
             price: 55,
-            details: [
-              {
-                detail: "32 porciones",
-              },
-            ],
+            details: [{ detail: "32 porciones" }],
           },
         ],
       },
     ],
     relatedProducts: [1, 2, 3, 4],
-    category: 7
+    category: 2,
   },
   {
     id: 8,
-    name: "Torta cubierta de merengue",
+    name: "Tres leches en domo",
     description:
-      "De altura regular con un capa de  relleno, puede ser de vainilla / chocolate con relleno de arequipe o pie de limón / parchita",
+      "Postre tres leches presentado en domo, cremoso y suave, elaborado con una mezcla perfecta de leches.",
     price: 24,
-    image: "/cake.webp",
+    image: "/products/tres-leches.jpg",
     freeShipping: true,
     details: [],
     variants: [
@@ -361,38 +277,436 @@ const products: Product[] = [
             name: "Pequena 19cm",
             image: "/cake.webp",
             price: 24,
-            details: [
-              {
-                detail: "12 porciones",
-              },
-            ],
+            details: [{ detail: "12 porciones" }],
           },
           {
             name: "Mediana 23cm",
             image: "/cake.webp",
             price: 35,
-            details: [
-              {
-                detail: "18 porciones",
-              },
-            ],
+            details: [{ detail: "18 porciones" }],
           },
           {
             name: "Grande 28cm",
             image: "/cake.webp",
             price: 55,
-            details: [
-              {
-                detail: "32 porciones",
-              },
-            ],
+            details: [{ detail: "32 porciones" }],
           },
         ],
       },
     ],
     relatedProducts: [1, 2, 3, 4],
-    category: 8
+    category: 3,
   },
+  {
+    id: 9,
+    name: "Beso de ángel en domo",
+    description:
+      "Delicado postre en domo con capas cremosas, dulce de leche y suave textura que se derrite al probarlo.",
+    price: 24,
+    image: "/products/beso-de-angel.jpg",
+    freeShipping: true,
+    details: [],
+    variants: [
+      {
+        title: "Tamano",
+        variants: [
+          {
+            name: "Pequena 19cm",
+            image: "/cake.webp",
+            price: 24,
+            details: [{ detail: "12 porciones" }],
+          },
+          {
+            name: "Mediana 23cm",
+            image: "/cake.webp",
+            price: 35,
+            details: [{ detail: "18 porciones" }],
+          },
+          {
+            name: "Grande 28cm",
+            image: "/cake.webp",
+            price: 55,
+            details: [{ detail: "32 porciones" }],
+          },
+        ],
+      },
+    ],
+    relatedProducts: [1, 2, 3, 4],
+    category: 3,
+  },
+  {
+  id: 10,
+  name: "Beso de ángel",
+  description:
+    "Exquisito postre cremoso con capas suaves y dulce sabor a leche condensada y caramelo.",
+  price: 24,
+  image: "/products/beso-de-angel.jpg",
+  freeShipping: true,
+  details: [],
+  variants: [
+    {
+      title: "Tamano",
+      variants: [
+        {
+          name: "Pequena 19cm",
+          image: "/cake.webp",
+          price: 24,
+          details: [{ detail: "12 porciones" }],
+        },
+        {
+          name: "Mediana 23cm",
+          image: "/cake.webp",
+          price: 35,
+          details: [{ detail: "18 porciones" }],
+        },
+        {
+          name: "Grande 28cm",
+          image: "/cake.webp",
+          price: 55,
+          details: [{ detail: "32 porciones" }],
+        },
+      ],
+    },
+  ],
+  relatedProducts: [1, 2, 3, 4],
+  category: 3,
+},
+{
+  id: 11,
+  name: "Beso de ángel (Quesitorta)",
+  description:
+    "Fusión irresistible entre quesillo y torta suave con capas cremosas y un toque dulce especial.",
+  price: 24,
+  image: "/products/beso-de-angel.jpg",
+  freeShipping: true,
+  details: [],
+  variants: [
+    {
+      title: "Tamano",
+      variants: [
+        {
+          name: "Pequena 19cm",
+          image: "/cake.webp",
+          price: 24,
+          details: [{ detail: "12 porciones" }],
+        },
+        {
+          name: "Mediana 23cm",
+          image: "/cake.webp",
+          price: 35,
+          details: [{ detail: "18 porciones" }],
+        },
+        {
+          name: "Grande 28cm",
+          image: "/cake.webp",
+          price: 55,
+          details: [{ detail: "32 porciones" }],
+        },
+      ],
+    },
+  ],
+  relatedProducts: [1, 2, 3, 4],
+  category: 3,
+},
+{
+  id: 12,
+  name: "Cuchareables",
+  description:
+    "Postres individuales servidos en vaso, perfectos para disfrutar sabores cremosos y frescos en cada cucharada.",
+  image: "/products/cuchareables.jpg",
+  price: 5,
+  relatedProducts: [],
+  variants: [],
+  freeShipping: true,
+  details: [],
+  category: 4,
+},
+{
+  id: 13,
+  name: "Brownie",
+  description:
+    "Brownie de chocolate húmedo y denso con intenso sabor a cacao, ideal para los amantes del chocolate.",
+  price: 3,
+  relatedProducts: [],
+  variants: [],
+  image: "/products/brownies.jpg",
+  freeShipping: true,
+  details: [],
+  category: 4,
+},
+{
+  id: 14,
+  name: "Ponquesitos escolares",
+  description:
+    "Suaves y esponjosos ponquesitos tradicionales, perfectos para meriendas, fiestas y loncheras.",
+  price: 10,
+  relatedProducts: [],
+  variants: [],
+  image: "/products/ponquesitos.jpg",
+  freeShipping: true,
+  details: [],
+  category: 4,
+},
+{
+  id: 15,
+  name: "Maxi Alfajores",
+  description:
+    "Grandes alfajores rellenos de abundante arequipe y cubiertos con azúcar pulverizada o chocolate.",
+  price: 10,
+  relatedProducts: [],
+  variants: [],
+  image: "/products/maxi-alfajores.jpg",
+  freeShipping: true,
+  details: [],
+  category: 4,
+},
+{
+  id: 16,
+  name: "Galleta Clasica",
+  description:
+    "Galleta artesanal de textura suave y sabor tradicional, perfecta para acompañar bebidas calientes.",
+  price: 10,
+  relatedProducts: [],
+  variants: [],
+  image: "/products/galleta-clasica.jpg",
+  freeShipping: true,
+  details: [],
+  category: 5,
+},
+{
+  id: 17,
+  name: "Galleta Triple Chocolate",
+  description:
+    "Irresistible galleta elaborada con cacao y trozos de tres tipos de chocolate para un sabor intenso.",
+  price: 10,
+  relatedProducts: [],
+  variants: [],
+  image: "/products/galleta-triple-chocolate.jpg",
+  freeShipping: true,
+  details: [],
+  category: 5,
+},
+{
+  id: 18,
+  name: "Galleta Red Velvet",
+  description:
+    "Galleta estilo Red Velvet con suave sabor a cacao y delicadas chispas de chocolate blanco.",
+  price: 10,
+  relatedProducts: [],
+  variants: [],
+  image: "/products/galleta-red-velvet.jpg",
+  freeShipping: true,
+  details: [],
+  category: 5,
+},
+  {
+  id: 19,
+  name: "Cupcakes sencillos o decorados",
+  description:
+    "Esponjosos cupcakes de vainilla o chocolate, disponibles en presentación sencilla o decorada para celebraciones, mesas dulces y eventos especiales.",
+  price: 12,
+  relatedProducts: [12, 13, 14],
+  variants: [],
+  image: '/products/mini-dulces.jpg',
+  freeShipping: true,
+  details: [],
+  category: 6,
+},
+{
+  id: 20,
+  name: "Trufas",
+  description:
+    "Deliciosas trufas artesanales con textura suave y cremosa, cubiertas con chocolate y decoraciones especiales ideales para regalar o compartir.",
+  price: 8,
+  relatedProducts: [13, 24, 29],
+  variants: [],
+  image: '/products/mini-dulces.jpg',
+  freeShipping: true,
+  details: [],
+  category: 6,
+},
+{
+  id: 21,
+  name: "Mini Alfajores",
+  description:
+    "Pequeños alfajores rellenos de arequipe y cubiertos con azúcar pulverizada, perfectos para meriendas, eventos y mesas dulces.",
+  price: 8,
+  relatedProducts: [15, 25],
+  variants: [],
+  image: '/products/mini-dulces.jpg',
+  freeShipping: true,
+  details: [],
+  category: 6,
+},
+{
+  id: 22,
+  name: "Mini canolis",
+  description:
+    "Crujientes mini canolis rellenos con crema dulce y sabores especiales, inspirados en la clásica repostería italiana.",
+  price: 10,
+  relatedProducts: [21, 27],
+  variants: [],
+  image: '/products/mini-dulces.jpg',
+  freeShipping: true,
+  details: [],
+  category: 6,
+},
+{
+  id: 23,
+  name: "Shots tres leches",
+  description:
+    "Postre individual de tres leches presentado en shot, suave, cremoso y perfecto para disfrutar en cualquier ocasión.",
+  price: 4,
+  relatedProducts: [8, 12],
+  variants: [],
+  image: '/products/mini-dulces.jpg',
+  freeShipping: true,
+  details: [],
+  category: 6,
+},
+{
+  id: 24,
+  name: "Shots chocolate",
+  description:
+    "Shots de chocolate con textura cremosa y sabor intenso, ideales para amantes del cacao y mesas de postres.",
+  price: 4,
+  relatedProducts: [6, 13],
+  variants: [],
+  image: '/products/mini-dulces.jpg',
+  freeShipping: true,
+  details: [],
+  category: 6,
+},
+{
+  id: 25,
+  name: "Shots limón",
+  description:
+    "Refrescantes shots de limón con equilibrio perfecto entre dulzor y acidez, servidos en presentación individual.",
+  price: 4,
+  relatedProducts: [1, 21],
+  variants: [],
+  image: '/products/mini-dulces.jpg',
+  freeShipping: true,
+  details: [],
+  category: 6,
+},
+{
+  id: 26,
+  name: "Shots parchita",
+  description:
+    "Shots cremosos de parchita con sabor tropical y toque dulce, ideales para celebraciones y reuniones.",
+  price: 4,
+  relatedProducts: [1, 23],
+  variants: [],
+  image: '/products/mini-dulces.jpg',
+  freeShipping: true,
+  details: [],
+  category: 6,
+},
+{
+  id: 27,
+  name: "Galletas chocochips",
+  description:
+    "Galletas artesanales con abundantes chispas de chocolate y textura suave por dentro, perfectas para acompañar un café o merienda.",
+  price: 10,
+  relatedProducts: [16, 17],
+  variants: [],
+  image: '/products/mini-dulces.jpg',
+  freeShipping: true,
+  details: [],
+  category: 6,
+},
+{
+  id: 28,
+  name: "Mini brownies",
+  description:
+    "Pequeños brownies de chocolate con textura húmeda y sabor intenso, ideales para compartir o complementar mesas dulces.",
+  price: 8,
+  relatedProducts: [13, 24],
+  variants: [],
+  image: '/products/mini-dulces.jpg',
+  freeShipping: true,
+  details: [],
+  category: 6,
+},
+{
+  id: 29,
+  name: "Pastaseca",
+  description:
+    "Selección de galletas de pastaseca artesanales con textura delicada y sabor tradicional, perfectas para acompañar bebidas calientes.",
+  price: 10,
+  relatedProducts: [16, 27],
+  variants: [],
+  image: '/products/mini-dulces.jpg',
+  freeShipping: true,
+  details: [],
+  category: 6,
+},
+{
+  id: 30,
+  name: "Tartaletas frías de fresas",
+  description:
+    "Tartaletas frías rellenas con crema suave y fresas frescas, elaboradas con base crujiente y presentación elegante.",
+  price: 12,
+  relatedProducts: [12, 23],
+  variants: [],
+  image: '/products/mini-dulces.jpg',
+  freeShipping: true,
+  details: [],
+  category: 6,
+},
+{
+  id: 31,
+  name: "Tartaletas frías de melocotón",
+  description:
+    "Tartaletas frías con crema dulce y melocotones jugosos sobre una base crocante, ideales para compartir en reuniones.",
+  price: 12,
+  relatedProducts: [12, 30],
+  variants: [],
+  image: '/products/mini-dulces.jpg',
+  freeShipping: true,
+  details: [],
+  category: 6,
+},
+{
+  id: 32,
+  name: "Mini donas",
+  description:
+    "Mini donas suaves y esponjosas con diferentes coberturas y toppings dulces, perfectas para fiestas y meriendas.",
+  price: 8,
+  relatedProducts: [19, 27],
+  variants: [],
+  image: '/products/mini-dulces.jpg',
+  freeShipping: true,
+  details: [],
+  category: 6,
+},
+{
+  id: 33,
+  name: "Mini bombas",
+  description:
+    "Pequeñas bombas rellenas con crema pastelera o chocolate, cubiertas con azúcar o topping especial.",
+  price: 9,
+  relatedProducts: [22, 32],
+  variants: [],
+  image: '/products/mini-dulces.jpg',
+  freeShipping: true,
+  details: [],
+  category: 6,
+},
+{
+  id: 34,
+  name: "Mini trufas",
+  description:
+    "Mini trufas de chocolate elaboradas artesanalmente, ideales para detalles, eventos y mesas de postres.",
+  price: 7,
+  relatedProducts: [20, 28],
+  variants: [],
+  image: '/products/mini-dulces.jpg',
+  freeShipping: true,
+  details: [],
+  category: 6,
+},
 ];
 
 export default products;

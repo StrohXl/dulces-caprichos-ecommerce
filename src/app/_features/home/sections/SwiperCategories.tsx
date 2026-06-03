@@ -13,9 +13,8 @@ export default function SwiperCategories() {
         <SwiperFather
           props={{
             wrapperClass: "py-2 pb-4",
-            loop: true,
+            loop: false,
             slidesPerView: 4,
-
             breakpoints: {
               300: {
                 slidesPerView: 2.5,
@@ -31,11 +30,6 @@ export default function SwiperCategories() {
                 centeredSlides: false,
                 slidesPerView: 6,
                 spaceBetween: 15,
-              },
-              1200: {
-                centeredSlides: false,
-                spaceBetween: 15,
-                slidesPerView: 8,
               },
             },
           }}
