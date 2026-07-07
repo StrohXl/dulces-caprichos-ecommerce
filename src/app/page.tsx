@@ -64,7 +64,7 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {products.map(
                 (product, index) =>
-                  index >= 4 && (
+                  index >= 4 && index <12 && (
                     <CardProduct key={product.id} product={product} />
                   ),
               )}

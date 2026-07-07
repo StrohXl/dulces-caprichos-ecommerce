@@ -1,6 +1,7 @@
 "use client";
 
 import { Product } from "@/app/_types/product.type";
+import { cleanText } from "@/app/_utils/cleanText";
 import {
   addProductToFavorites,
   removeProductFavorites,
@@ -9,21 +10,19 @@ import { addProductToShoppingCart } from "@/app/_utils/shopping-cart.utils";
 import { useContextLayout } from "@/app/hooks/contextLayout";
 import Image from "next/image";
 import Link from "next/link";
-import { FaHeart, FaRegHeart, FaTruck } from "react-icons/fa6";
+import { FaHeart, FaRegHeart } from "react-icons/fa6";
 import { RiShoppingCartLine } from "react-icons/ri";
 
 export default function CardProduct({ product }: { product: Product }) {
   const { favorites, setFavorites, setShoppingCart } = useContextLayout();
+  const pathname = cleanText(product.name)
 
   return (
     <div>
       <div className="card-media  w-full rounded-t-xl aspect-[1.3] relative overflow-hidden group">
         <Link
           href={{
-            pathname: `/${product.name}`,
-            query: {
-              number: product.id,
-            },
+            pathname: `/${pathname}`,
           }}
         >
           <Image
@@ -59,12 +58,8 @@ export default function CardProduct({ product }: { product: Product }) {
         <h4 className="text-rose-900 text-lg md:text-xl font-[ui-serif] font-medium line-clamp-2 mb-2 min-h-[2.5rem]">
           <Link
             href={{
-              pathname: `/${product.name}`,
-              query: {
-                number: product.id,
-              },
+              pathname: `/${product.name.replace(" ", "-").toLowerCase()}`,
             }}
-            className=""
           >
             {product.name}
           </Link>
@@ -85,7 +80,8 @@ export default function CardProduct({ product }: { product: Product }) {
           }}
           className="w-full py-2 border-rose-400 mt-4 duration-200 hover:bg-rose-400 hover:text-white flex text-sm md:text-base items-center gap-2 justify-center  text-rose-400 font-medium cursor-pointer border-1 text-center rounded-lg"
         >
-          Agregar al carrito <RiShoppingCartLine className="text-lg hidden sm:flex" />
+          Agregar al carrito{" "}
+          <RiShoppingCartLine className="text-lg hidden sm:flex" />
         </button>
       </div>
     </div>

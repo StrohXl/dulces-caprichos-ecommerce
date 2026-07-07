@@ -26,10 +26,10 @@ export default function Breadcrumb() {
   })
 
   return (
-    <nav className="flex items-center font-sans flex-wrap gap-2 text-sm relative">
+    <nav className="flex items-center font-sans  flex-wrap gap-2 text-sm relative">
       <Link
         href="/"
-        className="text-gray-700 font-dm-sans font-medium  hover:opacity-60 duration-200"
+        className="text-gray-700 font-dm-sans   hover:text-gray-900 duration-200"
       >
         Inicio
       </Link>
@@ -46,13 +46,13 @@ export default function Breadcrumb() {
             <span className="">/</span>
 
             {isLast ? (
-              <span className="text-gray-900 font-dm-sans font-semibold ">
+              <span className="text-rose-700 font-dm-sans font-medium ">
                 {crumb.label}
               </span>
             ) : (
               <Link
                 href={crumb.href}
-                className="text-gray-700 font-dm-sans font-medium"
+                className="text-gray-700 hover:text-gray-900 font-dm-sans"
               >
                   {crumb.label}
               </Link>

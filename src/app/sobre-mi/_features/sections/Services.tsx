@@ -1,7 +1,7 @@
 import ButtonEffect from "@/app/_components/buttons/ButtonEffect";
 import CardService from "../components/cardService";
 import services from "../data/services";
-import Link from "next/link";
+import networks from "@/app/_data/networks";
 
 export default function Services() {
   return (
@@ -32,7 +32,15 @@ export default function Services() {
         </div>
         <div className="flex justify-center mt-8">
           <ButtonEffect>
-            <Link href="/servicios">Ver todos los servicios</Link>
+            <a
+              href={
+                networks.find((n) => n.name === "WhatsApp")?.url || "https://wa.me/"
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Solicitar servicios ahora
+            </a>
           </ButtonEffect>
         </div>
       </div>

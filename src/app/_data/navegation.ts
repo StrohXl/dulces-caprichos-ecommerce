@@ -7,11 +7,6 @@ const navegation: ItemNavegation[] = [
     children: [],
   },
   {
-    link: "/servicios",
-    title: "Servicios",
-    children: [],
-  },
-  {
     link: "/sobre-mi",
     title: "Sobre mí",
     children: [],

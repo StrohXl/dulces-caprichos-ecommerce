@@ -5,10 +5,7 @@ export default function CardMiniCategory({ category }: { category: Category }) {
   return (
     <Link
       href={{
-        pathname:category.url,
-        query:{
-          id: category.id
-        }
+        pathname: category.url,
       }}
       className="flex flex-col card-mini-category duration-300 hover:shadow-rose-700/50 items-center justify-center px-4 py-6 h-full bg-white rounded-xl hover:shadow-md shadow-sm "
       scroll={true}
