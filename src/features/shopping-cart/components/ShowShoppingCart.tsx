@@ -1,5 +1,5 @@
-import { ShoppingCart } from "@/app/_types/shopping-cart.type";
-import ButtonEffect from "@/app/_components/buttons/ButtonEffect";
+import { ShoppingCart } from "@/_types/shopping-cart.type";
+import ButtonEffect from "@/components/buttons/ButtonEffect";
 import ItemShoppingCart from "../ItemShoppingCart";
 import Link from "next/link";
 

@@ -1,4 +1,4 @@
-import ContainerWidth from "@/app/_components/ContainerWidth";
+import ContainerWidth from "@/components/ContainerWidth";
 
 export default function BannerContact() {
   return (

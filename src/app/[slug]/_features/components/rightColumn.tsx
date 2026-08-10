@@ -1,16 +1,16 @@
-import { Product } from "@/app/_types/product.type";
+import { Product } from "@/_types/product.type";
 import { FaPlus, FaMinus, FaRegHeart, FaHeart } from "react-icons/fa6";
 import { LuShoppingCart } from "react-icons/lu";
 import { MdOutlineDeliveryDining } from "react-icons/md";
 import { LuShieldCheck } from "react-icons/lu";
 import { useState } from "react";
-import { useContextLayout } from "@/app/hooks/contextLayout";
+import { useContextLayout } from "@/hooks/contextLayout";
 import {
   addProductToFavorites,
   removeProductFavorites,
-} from "@/app/_utils/favorites.utils";
+} from "@/utils/favorites.utils";
 import categories from "@/app/_data/categories";
-import { addProductToShoppingCart } from "@/app/_utils/shopping-cart.utils";
+import { addProductToShoppingCart } from "@/utils/shopping-cart.utils";
 
 export default function RightColumn({ product }: { product: Product }) {
   const [quantity, setQuantity] = useState(1);

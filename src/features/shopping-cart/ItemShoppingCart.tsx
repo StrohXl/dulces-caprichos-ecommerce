@@ -6,15 +6,15 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import {
   ProductShoppingCart,
   ShoppingCart,
-} from "@/app/_types/shopping-cart.type";
+} from "@/_types/shopping-cart.type";
 import Image from "next/image";
 import Link from "next/link";
 import {
   minusProductShoppingCart,
   plusProductShoppingCart,
   removeProductShoppingCart,
-} from "@/app/_utils/shopping-cart.utils";
-import { useContextLayout } from "@/app/hooks/contextLayout";
+} from "@/utils/shopping-cart.utils";
+import { useContextLayout } from "@/hooks/contextLayout";
 
 export default function ItemShoppingCart({
   product,

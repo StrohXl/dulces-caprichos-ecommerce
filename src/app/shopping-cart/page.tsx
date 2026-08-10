@@ -1,9 +1,9 @@
 "use client";
 
-import ContainerWidth from "../_components/ContainerWidth";
-import { useContextLayout } from "../hooks/contextLayout";
-import EmptyShoppingCart from "../_features/shopping-cart/components/EmptyShoppingCart";
-import ShowShoppingCart from "../_features/shopping-cart/components/ShowShoppingCart";
+import ContainerWidth from "../../components/ContainerWidth";
+import { useContextLayout } from "../../hooks/contextLayout";
+import EmptyShoppingCart from "../../features/shopping-cart/components/EmptyShoppingCart";
+import ShowShoppingCart from "../../features/shopping-cart/components/ShowShoppingCart";
 
 export default function ShoppingCart() {
   const { shoppingCart } = useContextLayout();

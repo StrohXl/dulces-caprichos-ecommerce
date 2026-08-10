@@ -3,8 +3,8 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import { SwiperSlide } from "swiper/react";
-import BannerHero from "../_components/banners/BannerHero";
-import SwiperFather from "@/app/_components/SwiperFather";
+import BannerHero from "../../components/banners/BannerHero";
+import SwiperFather from "@/components/SwiperFather";
 import categories from "@/app/_data/categories";
 import products from "@/app/_data/products";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";

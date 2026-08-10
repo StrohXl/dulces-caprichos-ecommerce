@@ -1,13 +1,13 @@
 "use client";
 
-import { Product } from "@/app/_types/product.type";
-import { cleanText } from "@/app/_utils/cleanText";
+import { Product } from "@/_types/product.type";
+import { cleanText } from "@/utils/cleanText";
 import {
   addProductToFavorites,
   removeProductFavorites,
-} from "@/app/_utils/favorites.utils";
-import { addProductToShoppingCart } from "@/app/_utils/shopping-cart.utils";
-import { useContextLayout } from "@/app/hooks/contextLayout";
+} from "@/utils/favorites.utils";
+import { addProductToShoppingCart } from "@/utils/shopping-cart.utils";
+import { useContextLayout } from "@/hooks/contextLayout";
 import Image from "next/image";
 import Link from "next/link";
 import { FaHeart, FaRegHeart } from "react-icons/fa6";

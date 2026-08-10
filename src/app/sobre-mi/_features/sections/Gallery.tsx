@@ -1,8 +1,8 @@
 "use client";
 
-import ButtonEffect from "@/app/_components/buttons/ButtonEffect";
-import ContainerWidth from "@/app/_components/ContainerWidth";
-import CarouselGallery from "@/app/_features/gallery/components/CarouselGallery";
+import ButtonEffect from "@/components/buttons/ButtonEffect";
+import ContainerWidth from "@/components/ContainerWidth";
+import CarouselGallery from "@/features/gallery/components/CarouselGallery";
 import Link from "next/link";
 
 export default function Gallery() {

@@ -1,6 +1,6 @@
-import BannerHero from "../_components/banners/BannerHero";
-import ContainerWidth from "../_components/ContainerWidth";
-import FormArmaTuTorta from "../_features/arma-tu-torta/components/FormArmaTuTorta";
+import BannerHero from "../../components/banners/BannerHero";
+import ContainerWidth from "../../components/ContainerWidth";
+import FormArmaTuTorta from "../../features/arma-tu-torta/components/FormArmaTuTorta";
 
 export default function ArmaTuTorta() {
   return (

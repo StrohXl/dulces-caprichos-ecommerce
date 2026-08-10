@@ -1,8 +1,8 @@
 "use client";
 
-import CardMiniCategory from "@/app/_components/cards/CardMiniCategory";
-import ContainerWidth from "@/app/_components/ContainerWidth";
-import SwiperFather from "@/app/_components/SwiperFather";
+import CardMiniCategory from "@/components/cards/CardMiniCategory";
+import ContainerWidth from "@/components/ContainerWidth";
+import SwiperFather from "@/components/SwiperFather";
 import categories from "@/app/_data/categories";
 import { SwiperSlide } from "swiper/react";
 

@@ -1,9 +1,9 @@
 "use client";
 
-import ContainerWidth from "../_components/ContainerWidth";
-import EmptyFavorites from "../_features/favorites/EmptyFavorites";
-import ShowFavorites from "../_features/favorites/ShowFavorites";
-import { useContextLayout } from "../hooks/contextLayout";
+import ContainerWidth from "../../components/ContainerWidth";
+import EmptyFavorites from "../../features/favorites/EmptyFavorites";
+import ShowFavorites from "../../features/favorites/ShowFavorites";
+import { useContextLayout } from "../../hooks/contextLayout";
 
 export default function Favoritos() {
   const { favorites } = useContextLayout();

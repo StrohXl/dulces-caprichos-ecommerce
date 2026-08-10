@@ -1,6 +1,6 @@
-import CardProduct from "@/app/_components/cards/CardProduct";
-import { Product } from "@/app/_types/product.type";
-import { useContextLayout } from "@/app/hooks/contextLayout";
+import CardProduct from "@/components/cards/CardProduct";
+import { Product } from "@/_types/product.type";
+import { useContextLayout } from "@/hooks/contextLayout";
 
 export default function RelatedProducts({
   product,

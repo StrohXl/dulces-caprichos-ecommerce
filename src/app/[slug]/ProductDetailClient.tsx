@@ -1,11 +1,11 @@
 "use client";
 
-import { Product } from "@/app/_types/product.type";
+import { Product } from "@/_types/product.type";
 import RightColumn from "./_features/components/rightColumn";
 import LeftColumn from "./_features/components/leftColumn";
 import RelatedProducts from "./_features/components/relatedProducts";
-import ContainerWidth from "../_components/ContainerWidth";
-import Breadcrumb from "../_components/Breadcrumb";
+import ContainerWidth from "../../components/ContainerWidth";
+import Breadcrumb from "../../components/Breadcrumb";
 
 export default function ProductDetailClient({
   product,

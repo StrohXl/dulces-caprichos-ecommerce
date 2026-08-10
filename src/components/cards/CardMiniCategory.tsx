@@ -1,4 +1,4 @@
-import { Category } from "@/app/_types/category";
+import { Category } from "@/_types/category";
 import Link from "next/link";
 
 export default function CardMiniCategory({ category }: { category: Category }) {

@@ -1,5 +1,5 @@
-import ContainerWidth from "@/app/_components/ContainerWidth";
-import CountUp from "@/app/_components/CountUp";
+import ContainerWidth from "@/components/ContainerWidth";
+import CountUp from "@/components/CountUp";
 import Image from "next/image";
 
 export default function About() {

@@ -1,9 +1,9 @@
 "use client";
 
-import ButtonEffect from "@/app/_components/buttons/ButtonEffect";
-import ContainerWidth from "@/app/_components/ContainerWidth";
+import ButtonEffect from "@/components/buttons/ButtonEffect";
+import ContainerWidth from "@/components/ContainerWidth";
 import navegation from "@/app/_data/navegation";
-import { useContextLayout } from "@/app/hooks/contextLayout";
+import { useContextLayout } from "@/hooks/contextLayout";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaRegHeart } from "react-icons/fa6";

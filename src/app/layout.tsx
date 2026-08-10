@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "./_features/header/Header";
-import Footer from "./_features/footer/Footer";
-import ContextLayout from "./hooks/contextLayout";
+import Header from "../features/header/Header";
+import Footer from "../features/footer/Footer";
+import ContextLayout from "../hooks/contextLayout";
 
 
 const dmSans = DM_Sans({

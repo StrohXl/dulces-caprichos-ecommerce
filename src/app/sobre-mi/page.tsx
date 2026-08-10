@@ -2,9 +2,9 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import BannerHero from "../_components/banners/BannerHero";
+import BannerHero from "../../components/banners/BannerHero";
 import About from "./_features/sections/About";
-import BannerContact from "../_components/banners/BannerContact";
+import BannerContact from "../../components/banners/BannerContact";
 import Services from "./_features/sections/Services";
 import Gallery from "./_features/sections/Gallery";
 import { useEffect } from "react";

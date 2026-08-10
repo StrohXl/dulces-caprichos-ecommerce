@@ -1,4 +1,4 @@
-import { Product } from "@/app/_types/product.type";
+import { Product } from "@/_types/product.type";
 import ItemFavorite from "./ItemFavorite";
 
 export default function ShowFavorites({ favorites }: { favorites: Product[] }) {

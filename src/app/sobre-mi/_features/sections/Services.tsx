@@ -1,4 +1,4 @@
-import ButtonEffect from "@/app/_components/buttons/ButtonEffect";
+import ButtonEffect from "@/components/buttons/ButtonEffect";
 import CardService from "../components/cardService";
 import services from "../data/services";
 import networks from "@/app/_data/networks";

@@ -1,4 +1,4 @@
-import { Product } from "@/app/_types/product.type";
+import { Product } from "@/_types/product.type";
 import Image from "next/image";
 import { useState } from "react";
 

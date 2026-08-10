@@ -8,10 +8,10 @@ import {
   useLayoutEffect,
   useState,
 } from "react";
-import { Product } from "../_types/product.type";
-import { getFavorites } from "../_utils/favorites.utils";
-import { ShoppingCart } from "../_types/shopping-cart.type";
-import { getShoppingCart } from "../_utils/shopping-cart.utils";
+import { Product } from "../../_types/product.type";
+import { getFavorites } from "../utils/favorites.utils";
+import { ShoppingCart } from "../../_types/shopping-cart.type";
+import { getShoppingCart } from "../utils/shopping-cart.utils";
 
 type Layout = {
   favorites: Product[];

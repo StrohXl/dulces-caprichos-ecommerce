@@ -1,6 +1,6 @@
 import Image from "next/image";
-import BannerHero from "../_components/banners/BannerHero";
-import ContainerWidth from "../_components/ContainerWidth";
+import BannerHero from "../../components/banners/BannerHero";
+import ContainerWidth from "../../components/ContainerWidth";
 import categories from "../_data/categories";
 import Link from "next/link";
 

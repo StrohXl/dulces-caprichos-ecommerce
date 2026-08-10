@@ -1,9 +1,9 @@
-import BannerHero from "@/app/_components/banners/BannerHero";
-import Breadcrumb from "@/app/_components/Breadcrumb";
-import CardProduct from "@/app/_components/cards/CardProduct";
-import ContainerWidth from "@/app/_components/ContainerWidth";
-import { Category } from "@/app/_types/category";
-import { Product } from "@/app/_types/product.type";
+import BannerHero from "@/components/banners/BannerHero";
+import Breadcrumb from "@/components/Breadcrumb";
+import CardProduct from "@/components/cards/CardProduct";
+import ContainerWidth from "@/components/ContainerWidth";
+import { Category } from "@/_types/category";
+import { Product } from "@/_types/product.type";
 import Image from "next/image";
 import Link from "next/link";
 
