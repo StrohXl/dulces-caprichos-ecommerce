@@ -1,6 +1,6 @@
-import BannerHero from "../_components/banners/BannerHero";
-import ContainerWidth from "../_components/ContainerWidth";
-import FormArmaTuTorta from "../_features/arma-tu-torta/components/FormArmaTuTorta";
+import BannerHero from "@/components/banners/BannerHero";
+import ContainerWidth from "@/components/ContainerWidth";
+import FormArmaTuTorta from "@/features/arma-tu-torta/components/FormArmaTuTorta";
 
 export default function ArmaTuTorta() {
   return (
@@ -10,7 +10,7 @@ export default function ArmaTuTorta() {
         <section className="py-10 md:py-20">
           <div className="grid gap-12 grid-cols-1">
             <div className="text-center">
-              <span className="text-rose-600 text-sm font-bold font-dm-sans tracking-wider uppercase">
+              <span className="text-primary-700 text-sm font-bold font-dm-sans tracking-wider uppercase">
                 Tortas Personalizadas
               </span>
               <h2 className="text-4xl md:text-6xl text-gray-800 font-[ui-sans] mb-6">
@@ -23,7 +23,7 @@ export default function ArmaTuTorta() {
                 buscas.
               </p>
             </div>
-            <div className="bg-white max-w-3xl mx-auto w-full  p-6 py-10 rounded-lg text-start">
+            <div className="bg-white max-w-3xl mx-auto w-full rounded-lg text-start">
               <FormArmaTuTorta />
             </div>
           </div>
