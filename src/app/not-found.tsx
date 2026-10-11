@@ -1,6 +1,6 @@
 import Link from "next/link";
 import ButtonEffect from "@/components/buttons/ButtonEffect";
-import networks from "@/app/_data/networks";
+import networks from "@/data/networks";
 
 export default function NotFound() {
   const waUrl = networks.find((n) => n.name === "WhatsApp")?.url || "https://wa.me/";

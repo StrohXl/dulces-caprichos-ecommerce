@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
-import products from "../_data/products";
-import ProductDetailClient from "./ProductDetailClient";
-import { cleanText } from "../../utils/cleanText";
+import products from "@/features/products/data/products";
+import ProductDetailClient from "@/features/products/components/product-details/ProductDetailClient";
+import { cleanText } from "@/utils/cleanText";
 
 export default async function ProductDetail({
   params,

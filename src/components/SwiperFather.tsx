@@ -1,11 +1,13 @@
-import { ReactNode } from "react";
-import { Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperProps } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+
+import { ReactNode } from "react";
+import { Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperProps } from "swiper/react";
+
+
 
 import { SwiperModule } from "swiper/types";
 

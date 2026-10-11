@@ -84,14 +84,14 @@ export default function FormArmaTuTorta() {
   ];
 
   return (
-    <form className=" w-full" onSubmit={handleSubmit(formSubmit)}>
+    <form className="w-full" onSubmit={handleSubmit(formSubmit)}>
       <div>
-        <div className="flex justify-between mb-14 px-8">
+        <div className="flex justify-between  px-16 py-8 pb-14! border-b-1 border-gray-200">
           {form.map((item, index) => {
             return (
               <div key={item.label} className="relative font-dm-sans">
                 <div
-                  className={`h-[40px] w-[40px] duration-200 rounded-full  flex items-center justify-center text-sm text-xl font-bold ${position === index ? "bg-rose-700 text-white" : "text-gray-600 bg-gray-100"}`}
+                  className={`h-[40px] w-[40px] duration-200 rounded-full  flex items-center justify-center text-sm text-xl font-bold ${position === index ? "bg-primary-700 text-white" : "text-gray-600 bg-gray-100"}`}
                 >
                   {index + 1}
                 </div>
@@ -102,22 +102,22 @@ export default function FormArmaTuTorta() {
             );
           })}
         </div>
-        <div className="container-form">
-          <h2 className="mb-6 font-[ui-sans] text-2xl text-center">
+        <div className="container-form  px-14 py-8 border-gray-200">
+          <h2 className="mb-12 font-[ui-sans] text-2xl text-center">
             {form[position].label}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {position == 0 &&
               form[0].options.map((option) => (
                 <button
-                  className={`p-3 outline-none py-4 border cursor-pointer border-gray-300 rounded-lg hover:bg-gray-100 text-start ${option.value === size ? "bg-rose-600! border-rose-600!" : "bg-white"}`}
+                  className={`p-3 outline-none py-4 border cursor-pointer border-gray-300 rounded-lg hover:bg-gray-100 text-start ${option.value === size ? "bg-primary-700! border-primary-700!" : "bg-white"}`}
                   key={option.value}
                   data-value={option.value}
                   type="button"
                   onClick={() => setValue("size", option.value)}
                 >
                   <div
-                    className={`text-xl font-[ui-sans]  ${option.value === size ? "text-white" : "text-rose-800"}`}
+                    className={`text-xl font-[ui-sans]  ${option.value === size ? "text-white" : "text-primary"}`}
                   >
                     {option.label}
                   </div>
@@ -131,14 +131,14 @@ export default function FormArmaTuTorta() {
             {position == 1 &&
               form[1].options.map((option) => (
                 <button
-                  className={`p-3 outline-none py-4 border cursor-pointer border-gray-300 rounded-lg hover:bg-gray-100 text-center ${option.value === sabor ? "bg-rose-600! border-rose-600!" : "bg-white"}`}
+                  className={`p-3 outline-none py-4 border cursor-pointer border-gray-300 rounded-lg hover:bg-gray-100 text-center ${option.value === sabor ? "bg-primary-700! border-primary-700!" : "bg-white"}`}
                   key={option.value}
                   data-value={option.value}
                   type="button"
                   onClick={() => setValue("sabor", option.value)}
                 >
                   <div
-                    className={`text-xl font-[ui-sans]  ${option.value === sabor ? "text-white" : "text-rose-800"}`}
+                    className={`text-xl font-[ui-sans]  ${option.value === sabor ? "text-white" : "text-primary"}`}
                   >
                     {option.label}
                   </div>
@@ -147,14 +147,14 @@ export default function FormArmaTuTorta() {
             {position == 2 &&
               form[2].options.map((option) => (
                 <button
-                  className={`p-3 outline-none py-4 border cursor-pointer border-gray-300 rounded-lg hover:bg-gray-100 text-start ${option.value === diseno ? "bg-rose-600! border-rose-600!" : "bg-white"}`}
+                  className={`p-3 outline-none py-4 border cursor-pointer border-gray-300 rounded-lg hover:bg-gray-100 text-start ${option.value === diseno ? "bg-primary-700! border-primary-700!" : "bg-white"}`}
                   key={option.value}
                   data-value={option.value}
                   type="button"
                   onClick={() => setValue("diseno", option.value)}
                 >
                   <div
-                    className={`text-xl font-[ui-sans]  ${option.value === diseno ? "text-white" : "text-rose-800"}`}
+                    className={`text-xl font-[ui-sans]  ${option.value === diseno ? "text-white" : "text-primary"}`}
                   >
                     {option.label}
                   </div>
@@ -167,13 +167,13 @@ export default function FormArmaTuTorta() {
               ))}
           </div>
         </div>
-        <div className="mt-12 flex justify-between">
+        <div className="mt-12 pb-8 px-14 flex justify-between">
           <div>
             {position > 0 && (
               <button
                 onClick={() => setPosition((prev) => prev - 1)}
                 type="button"
-                className="bg-rose-500 cursor-pointer hover:bg-rose-700 rounded-full  text-white font-dm-sans font-medium py-3 px-6 min-w-[150px] justify-center flex items-center gap-2"
+                className="bg-rose-400 cursor-pointer hover:bg-primary duration-200 rounded-full  text-white font-dm-sans font-medium py-3 px-6 min-w-[150px] justify-center flex items-center gap-2"
               >
                 <FaArrowLeft />
                 Regresar
@@ -185,7 +185,7 @@ export default function FormArmaTuTorta() {
               <button
                 onClick={() => setPosition((prev) => prev + 1)}
                 type="button"
-                className="bg-rose-500 cursor-pointer hover:bg-rose-700 rounded-full  text-white font-dm-sans font-medium py-3 px-6 min-w-[150px] justify-center flex items-center gap-2"
+                className="bg-rose-400 cursor-pointer hover:bg-primary duration-200 rounded-full  text-white font-dm-sans font-medium py-3 px-6 min-w-[150px] justify-center flex items-center gap-2"
               >
                 Siguiente <FaArrowRight />
               </button>

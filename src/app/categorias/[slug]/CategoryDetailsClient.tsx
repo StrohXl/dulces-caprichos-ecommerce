@@ -1,9 +1,9 @@
 import BannerHero from "@/components/banners/BannerHero";
 import Breadcrumb from "@/components/Breadcrumb";
-import CardProduct from "@/components/cards/CardProduct";
+import CardProduct from "@/features/products/components/cards/CardProduct";
 import ContainerWidth from "@/components/ContainerWidth";
-import { Category } from "@/_types/category";
-import { Product } from "@/_types/product.type";
+import { Category } from "@/types/category";
+import { Product } from "@/types/product.type";
 import Image from "next/image";
 import Link from "next/link";
 

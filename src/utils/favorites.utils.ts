@@ -1,4 +1,4 @@
-import { Product } from "../../_types/product.type";
+import { Product } from "@/types/product.type";
 
 const key = "Favorites";
 

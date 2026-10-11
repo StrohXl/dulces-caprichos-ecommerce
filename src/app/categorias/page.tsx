@@ -1,7 +1,7 @@
 import Image from "next/image";
-import BannerHero from "../../components/banners/BannerHero";
-import ContainerWidth from "../../components/ContainerWidth";
-import categories from "../_data/categories";
+import BannerHero from "@/components/banners/BannerHero";
+import ContainerWidth from "@/components/ContainerWidth";
+import categories from "@/data/categories";
 import Link from "next/link";
 
 export default function Categories() {

@@ -1,15 +1,23 @@
 @import "tailwindcss";
 
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-marron: #5e3f31;
+  --color-primary: #800946;
+  --color-primary-700: #d30370;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--color-primary);
+  --color-primary-700: var(--color-primary-700);
+  --color-secondary: var(--color-marron);
   --font-dm-sans: var(--font-dm-sans);
-
+  --font-christmas: "christmasComeback";
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,40 +28,15 @@
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(45deg, #fff1f2dd, #fff1f2dd), url("/patron.webp");
+  background-size: 80%;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 #swiper-categories {
-  .swiper-slide {
-    --tw-duration: 200ms;
-    transition-duration: 200ms;
-  }
-  @media (width<998px) {
-    .swiper-slide-active {
-      transform: scale(1.1);
-      --tw-duration: 200ms;
-      transition-duration: 200ms;
-      .card-mini-category {
-        --tw-shadow-color: color-mix(
-          in oklab,
-          color-mix(
-              in oklab,
-              var(--color-gray-700) /* oklch(37.3% 0.034 259.733) = #364153 */
-                60%,
-              transparent
-            )
-            var(--tw-shadow-alpha),
-          transparent
-        );
-        --tw-shadow:
-          0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)),
-          0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-        box-shadow:
-          var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
-          var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow) !important;
-      }
-    }
+  .swiper-wrapper {
+    display: flex !important;
+    flex-direction: row;
   }
 }

@@ -11,7 +11,7 @@ export default function ButtonEffect({
 }) {
   return (
     <div className="button-effect relative overflow-hidden">
-      <div className={`blob-btn font-medium font-dm-sans ${classButton} `}>
+      <div className={`blob-btn font-medium font-[ui-serif] ${classButton} `}>
         {children}
         <span className="blob-btn__inner">
           <span className="blob-btn__blobs">

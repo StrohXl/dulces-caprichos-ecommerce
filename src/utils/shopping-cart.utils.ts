@@ -1,7 +1,7 @@
 import {
   ProductShoppingCart,
   ShoppingCart,
-} from "../../_types/shopping-cart.type";
+} from "@/types/shopping-cart.type";
 
 const key = "ShoppingCart";
 

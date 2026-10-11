@@ -1,5 +1,5 @@
 import { BsCake2Fill } from "react-icons/bs";
-import { Category } from "../_types/category";
+import { Category } from "@/types/category";
 import { GiCakeSlice, GiCookie, GiCupcake } from "react-icons/gi";
 import { MdCake } from "react-icons/md";
 import { RiCake3Fill } from "react-icons/ri";

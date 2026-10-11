@@ -1,5 +1,5 @@
-import categories from "@/app/_data/categories";
-import products from "@/app/_data/products";
+import categories from "@/data/categories";
+import products from "@/features/products/data/products";
 import { notFound } from "next/navigation";
 import CategoryDetailsClient from "./CategoryDetailsClient";
 

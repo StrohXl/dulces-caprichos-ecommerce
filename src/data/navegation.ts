@@ -1,4 +1,4 @@
-import { ItemNavegation } from "../_types/item-navegation.type";
+import { ItemNavegation } from "@/types/item-navegation.type";
 
 const navegation: ItemNavegation[] = [
   {
