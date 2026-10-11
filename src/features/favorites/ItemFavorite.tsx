@@ -1,11 +1,11 @@
 "use client";
 
-import { Product } from "@/_types/product.type";
 import { removeProductFavorites } from "@/utils/favorites.utils";
 import { useContextLayout } from "@/hooks/contextLayout";
 import Image from "next/image";
 import Link from "next/link";
 import { FaRegTrashAlt } from "react-icons/fa";
+import { Product } from "@/types/product.type";
 
 export default function ItemFavorite({ product }: { product: Product }) {
   const { setFavorites } = useContextLayout();

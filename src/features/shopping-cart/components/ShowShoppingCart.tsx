@@ -1,5 +1,4 @@
-import { ShoppingCart } from "@/_types/shopping-cart.type";
-import ButtonEffect from "@/components/buttons/ButtonEffect";
+import { ShoppingCart } from "@/types/shopping-cart.type";
 import ItemShoppingCart from "../ItemShoppingCart";
 import Link from "next/link";
 

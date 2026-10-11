@@ -3,10 +3,6 @@
 import { FaMinus, FaPlus } from "react-icons/fa6";
 import { FaRegTrashAlt } from "react-icons/fa";
 
-import {
-  ProductShoppingCart,
-  ShoppingCart,
-} from "@/_types/shopping-cart.type";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -15,6 +11,7 @@ import {
   removeProductShoppingCart,
 } from "@/utils/shopping-cart.utils";
 import { useContextLayout } from "@/hooks/contextLayout";
+import { ProductShoppingCart } from "@/types/shopping-cart.type";
 
 export default function ItemShoppingCart({
   product,
