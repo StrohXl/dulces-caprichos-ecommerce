@@ -13,8 +13,8 @@ export default function CardService({ service }: { service: Service }) {
           className=" h-full w-full duration-300 object-cover group-hover:scale-[1.1]"
         />
       </div>
-      <div className="mt-4">
-        <h3 className="text-lg md:text-xl leading-[normal] text-center font-[ui-serif] text-gray-800">
+      <div className="mt-4 mx-auto max-w-[150px]">
+        <h3 className="text-lg font-medium leading-[normal] text-center">
         {service.name}
         </h3>
       </div>

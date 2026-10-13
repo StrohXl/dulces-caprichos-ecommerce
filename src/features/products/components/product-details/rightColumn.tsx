@@ -18,9 +18,9 @@ export default function RightColumn({ product }: { product: Product }) {
 
   return (
     <div className="lg:col-span-1">
-      <div className="bg-white rounded-lg p-6 py-8 sticky shadow-sm shadow-gray-300 top-[100px] font-[ui-serif]">
+      <div className="bg-white rounded-lg p-6 py-8 sticky shadow-sm shadow-gray-300 top-[100px] font-[inter]">
         <div className="flex justify-between mb-4 ">
-          <span className="font-medium  text-gray-700">
+          <span className="text-secondary">
             {categories.find((item) => item.id == product.id)?.name}
           </span>
           {!favorites.some((item) => item.id == product.id) ? (
@@ -45,36 +45,36 @@ export default function RightColumn({ product }: { product: Product }) {
             </button>
           )}
         </div>
-        <h1 className="text-xl font-[ui-serif] md:text-2xl  text-gray-800 mb-2">
+        <h1 className="text-xl font-dm-serif-display md:text-2xl  text-primary mb-4">
           {product?.name}
         </h1>
         <div className="mb-8">
-          <p className="text-gray-600 text-sm font-dm-sans ">
+          <p className="text-secondary text-[15px] font-dm-sans ">
             {product.description}
           </p>
         </div>
         {/* Price */}
         <div className="mb-6">
           <div className="flex items-baseline gap-2">
-            <span className="text-4xl font-[ui-serif] text-primary font-medium">
-              <span className="text-lg ">$</span>
+            <span className="text-4xl font-dm-serif-display text-primary">
+              <span className="">$</span>
               {product.price}.00
             </span>
           </div>
         </div>
         {/* Quantity */}
         <div className="mb-6 ">
-          <label className="block  font-medium text-gray-700 mb-2">
+          <label className="block font-medium text-sm text-secondary mb-2">
             Cantidad
           </label>
-          <div className="flex items-center border-1 border-gray-200 rounded-md w-fit ">
+          <div className="flex items-center border-1 border-gray-200 rounded-md w-fit text-primary ">
             <button
               onClick={() => setQuantity(Math.max(1, quantity - 1))}
               className="px-2 outline-none ps-6  flex items-center justify-center cursor-pointer "
             >
               <FaMinus />
             </button>
-            <span className="w-8  h-full py-2 font-[ui-sans] text-center font-medium">
+            <span className="w-8  h-full py-2 font-dm-serif-display text-center font-medium">
               {quantity}
             </span>
             <button
@@ -87,7 +87,7 @@ export default function RightColumn({ product }: { product: Product }) {
         </div>
 
         {/* Actions */}
-        <div className="space-y-3 mb-6 mt-12 text-lg">
+        <div className="space-y-3 mb-6 mt-12">
           <button className="w-full bg-primary hover:bg-primary/80 text-white font-medium py-3 px-4 rounded-md transition-colors  cursor-pointer">
             Comprar ahora
           </button>

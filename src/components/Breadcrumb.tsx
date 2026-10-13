@@ -26,10 +26,10 @@ export default function Breadcrumb() {
   })
 
   return (
-    <nav className="flex items-center font-[ui-serif]  flex-wrap gap-2  relative">
+    <nav className="flex items-center font-[inter] text-sm  flex-wrap gap-2  relative">
       <Link
         href="/"
-        className="text-gray-700    hover:text-gray-900 duration-200"
+        className="text-secondary    hover:text-gray-900 duration-200"
       >
         Inicio
       </Link>
@@ -41,18 +41,18 @@ export default function Breadcrumb() {
         return (
           <div
             key={crumb.href}
-            className="flex items-center gap-2 text-gray-700"
+            className="flex items-center gap-2 text-secondary"
           >
             <span className="">/</span>
 
             {isLast ? (
-              <span className="text-primary-700  font-medium ">
+              <span className="text-primary  font-medium ">
                 {crumb.label}
               </span>
             ) : (
               <Link
                 href={crumb.href}
-                className="text-gray-700 hover:text-gray-900 "
+                className="text-secondary hover:text-gray-900 "
               >
                   {crumb.label}
               </Link>

@@ -9,7 +9,7 @@ import categories from "@/data/categories";
 export default function SwiperCategories() {
   return (
     <section className="mt-4 relative z-20 mb-12" id="swiper-categories">
-      <ContainerWidth className="max-w-[1100px]!">
+      <ContainerWidth>
         <SwiperFather
           props={{
             wrapperClass: "py-2 pb-4",

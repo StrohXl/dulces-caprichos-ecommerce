@@ -17,8 +17,8 @@ export default function LeftColumn({ product }: { product: Product }) {
                 onClick={() => setSelectedImage(index)}
                 className={`flex-shrink-0 w-20 h-20 md:w-full relative md:h-auto! aspect-[1] rounded-lg overflow-hidden border-2 transition-colors ${
                   selectedImage === index
-                    ? "border-rose-400"
-                    : "border-transparent hover:border-gray-300"
+                    ? "border-primary-700"
+                    : "border-[#fff3f5] hover:border-primary"
                 }`}
               >
                 <Image src={img} alt="" fill className="object-cover" />
@@ -40,8 +40,8 @@ export default function LeftColumn({ product }: { product: Product }) {
 
       {/* Description */}
       <div className="bg-white rounded-lg p-6 py-8 shadow-sm shadow-gray-300">
-        <h2 className="text-xl md:text-2xl  font-[ui-serif] text-primary mb-4">Descripción</h2>
-        <p className="text-gray-600 leading-relaxed text-sm font-dm-sans">{product.description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nihil aut, obcaecati molestias harum aspernatur, sint perferendis quasi assumenda quas hic ipsa maiores numquam. Atque, asperiores? Suscipit praesentium sapiente itaque?</p>
+        <h2 className="text-xl md:text-2xl font-dm-serif-display text-primary mb-4">Descripción</h2>
+        <p className="text-secondary leading-relaxed text-sm font-[inter]">{product.description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nihil aut, obcaecati molestias harum aspernatur, sint perferendis quasi assumenda quas hic ipsa maiores numquam. Atque, asperiores? Suscipit praesentium sapiente itaque?</p>
 
      
       </div>

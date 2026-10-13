@@ -1,22 +1,21 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/header/Header";
 import Footer from "@/components/layout/footer/Footer";
 import ContextLayout from "@/hooks/contextLayout";
-import localFont from "next/font/local";
 
-
-const christmasComeback = localFont({
-  src: "../fonts/CHRISTMAS-COMEBACK.otf",
-  variable: "--font-christmas",
-  display: "swap",
-})
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
 });
+
+const dmSerifDisplay = DM_Serif_Display({
+    variable: "--font-dm-serif-display",
+    subsets: ["latin"],
+    weight: "400",
+  });
 
 export const metadata: Metadata = {
   title: "Dulces Caprichos",
@@ -32,7 +31,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSans.variable} ${christmasComeback.variable} h-full antialiased`}
+      className={`${dmSans.variable} ${dmSerifDisplay.variable}  h-full antialiased`}
     >
       <head>
         <link rel="icon" href="/logos/icono-3.ico" />
@@ -40,7 +39,7 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col">
         <ContextLayout>
           <Header />
-          <main className="pt-18 flex-1" >{children}</main>
+          <main className="flex-1 pt-8" >{children}</main>
           <Footer />
         </ContextLayout>
       </body>

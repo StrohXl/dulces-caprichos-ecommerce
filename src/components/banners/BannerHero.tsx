@@ -10,11 +10,16 @@ export default function BannerHero({
   return (
     <section
       id="hero"
-      className="relative min-h-[200px] -mt-18  px-4 md:px-6 lg:px-8 flex items-center justify-center flex-col"
+      className="relative min-h-[200px] pb-10 pt-2 flex items-center justify-center flex-col"
     >
-      <h1 className="text-6xl relative capitalize font-[ui-serif] font-bold">
-        {title}
-      </h1>
+      <div className="w-full h-uato aspect-[1.45] relative max-w-[250px]">
+        <Image
+          src="/logos/logotipo-1.png"
+          alt="Dulces caprichos"
+          fill
+          className="object-contain"
+        />
+      </div>
     </section>
   );
 }

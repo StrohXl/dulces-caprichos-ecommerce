@@ -3,33 +3,73 @@ import BannerHero from "@/components/banners/BannerHero";
 import ContainerWidth from "@/components/ContainerWidth";
 import categories from "@/data/categories";
 import Link from "next/link";
+import Breadcrumb from "@/components/Breadcrumb";
+import { FaArrowRight } from "react-icons/fa6";
 
 export default function Categories() {
   return (
     <>
-     <BannerHero title="Categorias" urlImage="/cake.webp" />
-     <section className="py-12">
-      <ContainerWidth>
-        <div className="grid gap-4 sm:grid-cols-2  " >
-          {categories.map((category)=>{
-            return(
-              <div key={category.id} className="w-full lg:aspect-[2] shadow-sm shadow-gray-400 p-4 py-14 md:px-8 relative rounded-2xl overflow-hidden  flex items-center " >
-                <Image src={category.imageUrl} fill className="object-cover object-[150px_center] sm:object-[50px_center] lg:object-[150px_center]  -z-20" alt={category.name} />
-                <div className="bg-linear-to-r from-pink-600 from-40%  to-gray-50/50 absolute top-0 left-0 w-full h-full -z-10" ></div>
-                <div className="font-[ui-serif]" >
-                  <h2 className="text-white text-6xl md:text-8xl font-bold " >
-                    <Link href={category.url} className="before:absolute before:top-0 before:left-0 before:w-full before:h-full "  >
-                    {category.name}
+      <BannerHero title="Categorias" urlImage="/cake.webp" />
+      <section className="py-12 bg-[#FFFCFA]">
+        <ContainerWidth>
+          <Breadcrumb />
+          <div className="mt-6 mb-10 flex items-center justify-between">
+            <div>
+              <h1 className="text-xl md:text-2xl lg:text-3xl font-dm-serif-display text-primary mb-2">
+                Un dulce capricho para cada ocasión
+              </h1>
+              <p>
+                Explora nuestras categorías y encuentra tu próximo favorito.
+              </p>
+            </div>
+
+            <span className="bg-[#FFF3F5] text-primary flex py-[10] px-5 text-sm font-medium rounded-full">
+              {categories.length} Categorías
+            </span>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3   ">
+            {categories.map((category) => {
+              const IconCategory = category.icon;
+
+              return (
+                <div
+                  key={category.id}
+                  className="shadow-sm relative rounded-xl overflow-hidden flex flex-col"
+                >
+                  <div className="relative w-full aspect-[1.5]">
+                    <Image
+                      src={category.imageUrl}
+                      fill
+                      className="object-cover"
+                      alt={category.name}
+                    />
+                  </div>
+
+                  <div className="p-4 pb-6 h-full bg-white flex flex-col gap-4">
+                    <div className="grid grid-cols-[50px_1fr] items-center gap-4">
+                      <div className="w-[50px] h-[50px] bg-[#FFF3F5] rounded-md flex items-center justify-center">
+                      <IconCategory className="text-primary text-3xl" />
+                        </div>
+                      <h2 className="text-xl font-dm-serif-display text-primary">
+                        {category.name}
+                      </h2>
+                    </div>
+                    <p className="">{category.description}</p>
+                    <Link
+                      href={category.url}
+                      className="text-primary border-1 mt-auto border-primary block py-[10px] flex items-center justify-center gap-2 rounded-lg font-medium duration-200 hover:bg-primary hover:text-white"
+                    >
+                      Ver productos
+                      <FaArrowRight />
                     </Link>
-                  </h2>
-                  <p className="text-white text-xl md:text-2xl max-w-[350px]  mt-4 line-clamp-2" >{category.description}</p>
+                  </div>
                 </div>
-              </div>
-            )
-          })}
-        </div>
-      </ContainerWidth>
-     </section>
+              );
+            })}
+          </div>
+        </ContainerWidth>
+      </section>
     </>
   );
 }

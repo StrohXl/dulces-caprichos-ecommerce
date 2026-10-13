@@ -10,6 +10,8 @@ import products from "@/features/products/data/products";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 import "./galeria.css";
+import Breadcrumb from "@/components/Breadcrumb";
+import ContainerWidth from "@/components/ContainerWidth";
 
 export default function Galleria() {
   return (
@@ -31,19 +33,22 @@ function GalleryByCategory() {
   );
 
   return (
-    <section className="py-8 bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-6">
-          <h2 className="text-3xl font-semibold text-rose-900">Categorías</h2>
-          <p className="mt-2 text-sm text-gray-600">
+    <section className="py-12 bg-[#FFFCFA]">
+      <ContainerWidth>
+        <Breadcrumb />
+        <div className="my-6">
+          <h1 className=" text-xl md:text-2xl lg:text-3xl font-dm-serif-display text-primary">
+            Categorías
+          </h1>
+          <p className="mt-4">
             Selecciona una categoría para ver las imágenes de los productos.
           </p>
         </div>
         <div className="px-[50px] relative ">
-          <button className="btn-left-carousel-gallery w-[40px] aspect-square rounded-full flex items-center justify-center bg-rose-600 text-white cursor-pointer absolute top-[50%] translate-y-[-50%] left-0">
+          <button className="btn-left-carousel-gallery w-[40px] aspect-square rounded-full flex items-center justify-center bg-primary text-white cursor-pointer absolute top-[50%] translate-y-[-50%] left-0">
             <FaChevronLeft />
           </button>
-          <button className="btn-right-carousel-gallery w-[40px] aspect-square rounded-full flex items-center justify-center bg-rose-600 text-white cursor-pointer absolute top-[50%] translate-y-[-50%] right-0">
+          <button className="btn-right-carousel-gallery w-[40px] aspect-square rounded-full flex items-center justify-center bg-primary text-white cursor-pointer absolute top-[50%] translate-y-[-50%] right-0">
             <FaChevronRight />
           </button>
 
@@ -93,8 +98,8 @@ function GalleryByCategory() {
                     onClick={() => setActiveCategoryId(category.id)}
                     className={`w-full rounded-3xl cursor-pointer border px-4 py-3 text-center text-sm font-medium transition-all duration-200 ${
                       isActive
-                        ? "border-rose-400 bg-rose-50 text-rose-900 font-semibold shadow-sm"
-                        : "border-gray-200 bg-white text-gray-700 hover:border-rose-300"
+                        ? "border-primary bg-white text-primary font-semibold shadow-sm"
+                        : "border-gray-200 bg-white hover:border-primary"
                     }`}
                   >
                     {category.name}
@@ -110,7 +115,7 @@ function GalleryByCategory() {
             activeProducts.map((product) => (
               <div
                 key={product.id}
-                className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm"
+                className="overflow-hidden rounded-xl bg-white shadow-sm"
               >
                 <div className="relative aspect-[4/3] w-full">
                   <Image
@@ -128,7 +133,7 @@ function GalleryByCategory() {
             </div>
           )}
         </div>
-      </div>
+      </ContainerWidth>
     </section>
   );
 }

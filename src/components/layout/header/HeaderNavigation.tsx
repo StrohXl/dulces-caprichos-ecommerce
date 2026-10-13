@@ -10,7 +10,7 @@ export default function HeaderNavigation() {
           {navegation.map((item) => {
             return (
               <Link
-                className={` duration-200 font-[ui-serif] text-lg text-primary `}
+                className={` duration-200 font-[inter] text-primary `}
                 key={item.title}
                 href={item.link}
               >
@@ -22,7 +22,7 @@ export default function HeaderNavigation() {
             );
           })}
         </nav>
-        <ButtonEffect classBlob="bg-primary!"  classButton="py-[8px]! bg-rose-400! px-6!">
+        <ButtonEffect classBlob="bg-rose-400!"  classButton="py-[8px]! bg-primary! px-6!">
           Pedir Ahora
         </ButtonEffect>
       </div>

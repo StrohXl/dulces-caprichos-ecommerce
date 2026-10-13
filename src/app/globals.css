@@ -8,6 +8,7 @@
   --color-marron: #5e3f31;
   --color-primary: #800946;
   --color-primary-700: #d30370;
+  --color-secondary: #795465;
 }
 
 @theme inline {
@@ -15,9 +16,10 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--color-primary);
   --color-primary-700: var(--color-primary-700);
-  --color-secondary: var(--color-marron);
+  --color-secondary: var(--color-secondary);
   --font-dm-sans: var(--font-dm-sans);
   --font-christmas: "christmasComeback";
+  --font-dm-serif-display: var(--font-dm-serif-display);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,8 +32,8 @@
 body {
   background: linear-gradient(45deg, #fff1f2dd, #fff1f2dd), url("/patron.webp");
   background-size: 80%;
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
+  color: var(--color-secondary)
 }
 
 #swiper-categories {
