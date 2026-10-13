@@ -15,18 +15,18 @@ export default function Gallery() {
       <ContainerWidth>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:gap-16 items-center">
           <div>
-            <span className="text-primary-700 text-sm font-bold block mb-6 font-dm-sans uppercase">
+            <span className="text-primary text-sm font-bold block mb-2 uppercase">
               Mi Galería
             </span>
-            <h2 className="text-4xl md:text-6xl max-w-lg  text-gray-800 font-[ui-sans]">
+            <h2 className="text-4xl md:text-6xl max-w-lg  text-primary font-dm-serif-display">
               Explora mi Galería de Creaciones
             </h2>
-            <p className="font-dm-sans max-w-xl  text-gray-700 mt-6 mb-8 md:mb-10 ">
+            <p className="max-w-xl my-6 ">
               Explora el universo de mis pasteles y cupcakes personalizados,
               donde cada diseño refleja mi amor por la repostería.
             </p>
             <div className="hidden md:flex justify-center md:justify-start">
-              <Link href="/galeria" className="flex items-center gap-2 w-full h-full duration-200 hover:text-primary text-gray-800 text-lg font-[ui-serif] ">
+              <Link href="/galeria" className="flex items-center gap-2 w-full h-full duration-200 text-primary hover:text-secondary text-lg font-dm-serif-display ">
 
                 Ver toda la galería
                 <IoIosArrowRoundForward className="text-2xl translate-y-[1px]" />

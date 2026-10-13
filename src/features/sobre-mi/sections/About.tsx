@@ -1,12 +1,15 @@
+import Breadcrumb from "@/components/Breadcrumb";
 import ContainerWidth from "@/components/ContainerWidth";
 import CountUp from "@/components/CountUp";
 import Image from "next/image";
 
 export default function About() {
   return (
-    <section id="about" className="pb-20 px-4">
+    <section id="about" className="py-12 px-4 bg-[#FFFCFA] ">
       <ContainerWidth>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <Breadcrumb />
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8">
           <div className="relative">
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary-700/20 rounded-full opacity-50" />
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary-700/80 rounded-full opacity-50" />
@@ -20,16 +23,18 @@ export default function About() {
             </div>
           </div>
           <div>
-            <span className="text-primary-700  font-dm-sans text-sm font-bold tracking-wider uppercase">
+            <span className="text-primary text-sm font-bold tracking-wider uppercase">
               Viviana Mayora
             </span>
-            <h2 className="text-4xl md:text-6xl  font-[ui-serif] text-gray-800 mt-2 mb-6">
+            <h2 className="text-4xl md:text-6xl  font-dm-serif-display text-primary mt-2 mb-6">
               Pasión por la Repostería
             </h2>
-            <div className="space-y-4 text-gray-600 font-dm-sans text-lg leading-relaxed">
+            <div className="space-y-4 text-lg leading-relaxed">
               <p>
-                ¡Hola! Soy <strong className="text-gray-800" >Viviana Mayora</strong>, repostera
-                certificada con más de <strong className="text-gray-800" >5 años de experiencia</strong>{" "}
+                ¡Hola! Soy{" "}
+                <strong className="text-primary">Viviana Mayora</strong>,
+                repostera certificada con más de{" "}
+                <strong className="text-primary">5 años de experiencia</strong>{" "}
                 creando obras deliciosas para toda ocasión.
               </p>
               <p>
@@ -50,36 +55,30 @@ export default function About() {
             <div className="mt-8 grid grid-cols-2 lg:grid-cols-3 gap-4">
               <div className="flex flex-col justify-center items-center gap-3">
                 <div className="">
-                  <span className="text-primary-700 flex justify-center items-center font-[ui-sans] text-3xl md:text-5xl font-bold">
+                  <span className="text-primary flex justify-center items-center font-dm-serif-display text-3xl md:text-5xl font-bold">
                     <CountUp from={0} to={5} />
                     <span className="text-3xl ">+</span>
                   </span>
                 </div>
-                <span className="text-gray-700 font-dm-sans font-semibold">
-                  Años de Trayectoria
-                </span>
+                <span className=" font-semibold">Años de Trayectoria</span>
               </div>
               <div className="flex flex-col justify-center items-center gap-3">
                 <div className="">
-                  <span className="text-primary-700 flex justify-center items-center font-[ui-sans] text-3xl md:text-5xl font-bold">
+                  <span className="text-primary flex justify-center items-center font-dm-serif-display text-3xl md:text-5xl font-bold">
                     <CountUp from={0} to={100} />
                     <span className="text-3xl ">%</span>
                   </span>
                 </div>
-                <span className="text-gray-700 font-dm-sans font-semibold">
-                  Productos Caseros
-                </span>
+                <span className=" font-semibold">Productos Caseros</span>
               </div>
               <div className="flex flex-col justify-center items-center gap-3">
                 <div className="">
-                  <span className="text-primary-700 flex justify-center items-center font-[ui-sans] text-3xl md:text-5xl font-bold">
+                  <span className="text-primary flex justify-center items-center font-dm-serif-display text-3xl md:text-5xl font-bold">
                     <CountUp from={0} to={200} />
                     <span className="text-3xl ">+</span>
                   </span>
                 </div>
-                <span className="text-gray-700 font-dm-sans font-semibold">
-                  Clientes Satisfechos
-                </span>
+                <span className=" font-semibold">Clientes Satisfechos</span>
               </div>
             </div>
           </div>

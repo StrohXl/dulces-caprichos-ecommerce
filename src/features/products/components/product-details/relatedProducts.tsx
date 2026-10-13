@@ -16,8 +16,8 @@ export default function RelatedProducts({
   );
 
   return (
-    <div className="mt-8">
-      <h2 className="text-xl font-[ui-serif] text-primary md:text-2xl mb-4">
+    <div >
+      <h2 className="text-xl font-dm-serif-display text-primary md:text-2xl lg:text-3xl mb-8">
         Productos relacionados
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

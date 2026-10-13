@@ -3,7 +3,6 @@
 import ContainerWidth from "@/components/ContainerWidth";
 import { useContextLayout } from "@/hooks/contextLayout";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { FaRegHeart } from "react-icons/fa6";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { IoSearch } from "react-icons/io5";
@@ -15,31 +14,14 @@ import Image from "next/image";
 
 export default function Header() {
   const { shoppingCart } = useContextLayout();
-  const [activeHeader, setActiveHeader] = useState(false);
-
-  const updateHeader = () => {
-    const scrollY = window.scrollY;
-    if (scrollY > 0) {
-      setActiveHeader(true);
-    } else {
-      setActiveHeader(false);
-    }
-  };
-
-  useEffect(() => {
-    // eslint-disable-next-line
-    updateHeader();
-
-    addEventListener("scroll", updateHeader);
-  }, []);
 
   return (
     <>
       <header
-        className={`sticky w-full top-0 left-0 bg-white z-50 ${activeHeader && " shadow-sm"}`}
+        className={`sticky w-full top-0 left-0 bg-white z-50 shadow-sm`}
       >
         <ContainerWidth className="relative">
-          <div className="flex justify-between items-center pt-2 pb-2">
+          <div className="flex justify-between items-center py-3">
             <div className="flex items-center">
               <Link href="/" aria-label="Home" title="Inicio">
                 <Image src="/logos/isotipo-1.png" alt="dulces" width={50} height={50} />
@@ -49,9 +31,9 @@ export default function Header() {
             <HeaderNavigation />
 
             <div className=" flex items-center gap-8">
-              <div className="input-search font-[ui-serif] relative hidden lg:flex">
+              <div className="input-search font-[inter] text-sm relative hidden lg:flex">
                 <input
-                  className={` px-4 bg-transparent border-1 border-gray-300 pl-5 py-2 outline-none rounded-full`}
+                  className={` px-4 bg-transparent border-1 border-gray-300 pl-5 py-[10px] outline-none rounded-full`}
                   type="text"
                   placeholder="Buscar productos..."
                 />

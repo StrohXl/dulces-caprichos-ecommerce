@@ -25,9 +25,13 @@ export default function ProductDetailClient({
             <LeftColumn product={product} />
             <RightColumn product={product} />
           </div>
-          <RelatedProducts product={product} products={products} />
         </div>
       </ContainerWidth>
+      <div className="bg-[#FFFcfa] py-14" >
+        <ContainerWidth>
+          <RelatedProducts product={product} products={products} />
+        </ContainerWidth>
+      </div>
     </div>
   );
 }

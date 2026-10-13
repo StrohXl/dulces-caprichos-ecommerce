@@ -36,9 +36,9 @@ export default function CardProduct({ product }: { product: Product }) {
         </Link>
         <ButtonHeart heartActive={heartActive} product={product} setFavorites={setFavorites} />
       </div>
-      <div className="pt-4 bg-white border-b-4 font-[ui-serif] border-primary rounded-b-xl p-4">
+      <div className="pt-4 bg-white border-x-1 border-x-primary/50 border-b-4 font-dm-serif-display border-primary rounded-b-xl p-4">
         
-        <h4 className="text-gray-800 text-lg md:text-xl font-medium line-clamp-2 mb-2 min-h-[2.5rem]">
+        <h4 className="text-primary text-lg md:text-xl line-clamp-2 mb-2 min-h-[2.5rem]">
           <Link
             href={{
               pathname: `/${product.name.replace(" ", "-").toLowerCase()}`,
@@ -48,13 +48,13 @@ export default function CardProduct({ product }: { product: Product }) {
           </Link>
         </h4>
 
-        <p className="text-sm text-gray-600 mb-2 line-clamp-3 font-dm-sans">
+        <p className="text-sm text-secondary mb-4 line-clamp-3 font-dm-sans">
           {product.description}
         </p>
 
-        <div className="flex items-baseline mt-2  text-primary">
-          <span>$</span>
-          <span className="text-3xl font-medium">{product.price}</span>
+        <div className="text-primary font-dm-serif-display">
+          <span className="text-3xl">$</span>
+          <span className="text-3xl">{product.price}</span>
         </div>
 
 
@@ -65,7 +65,7 @@ export default function CardProduct({ product }: { product: Product }) {
             });
             setShoppingCart(newList);
           }}
-          className="w-full py-2 border-primary mt-4 duration-200 hover:bg-primary hover:text-white flex items-center gap-2 justify-center  text-primary font-medium cursor-pointer border-1 text-center rounded-md"
+          className="w-full py-2 border-primary mt-4 duration-200 hover:bg-primary hover:text-white flex items-center gap-2 justify-center  text-primary cursor-pointer border-1 text-center rounded-md"
         >
           Agregar al carrito{" "}
           <RiShoppingCartLine className="text-lg hidden sm:flex" />
@@ -95,7 +95,7 @@ const ButtonHeart = ({
         }
         setFavorites(newList);
       }}
-      className="cursor-pointer group-hover:right-4! group-hover:opacity-100 duration-200 opacity-0 outline-none  absolute text-primary-700 top-4 right-3  text-xl rounded-full"
+      className="cursor-pointer group-hover:right-4! group-hover:opacity-100 duration-200 opacity-0 outline-none  absolute bg-[#FFF3F5] p-2 text-primary top-4 right-3  text-xl rounded-full"
     >
       {heartActive ? <FaRegHeart /> : <FaHeart />}
     </button>

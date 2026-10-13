@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
 <footer
-  className="bg-white font-dm-sans"
+  className="bg-[#FFF3F5] font-dm-sans"
 >
   <ContainerWidth className="px-6 pt-2 sm:px-8" > 
 
@@ -19,13 +19,13 @@ export default function Footer() {
           aria-label="Dulces caprichos, inicio"
           className="inline-block  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#870A4B]"
         >
-          <Image alt="Dulces Caprichos" src="/logos/logotipo-1.png" width={800} height={800} className="max-w-[200px]  h-auto! " />
+          <Image alt="Dulces Caprichos" src="/logos/isotipo-1.png" width={1800} height={1800} className="max-w-[150px]  h-auto! " />
         </Link>
 
       </div>
 
       <nav aria-label="Descubre">
-        <h3 className="font-[ui-serif] mb-5 text-lg font-semibold ">
+        <h3 className="font-dm-serif-display mb-5 text-lg text-primary ">
           Descubre
         </h3>
         <ul className="space-y-3 text-base">
@@ -53,7 +53,7 @@ export default function Footer() {
       </nav>
 
       <nav aria-label="Tus pedidos">
-        <h3 className="font-[ui-serif] mb-5 text-lg font-semibold">
+        <h3 className="font-dm-serif-display mb-5 text-lg text-primary">
           Tus pedidos
         </h3>
         <ul className="space-y-3 text-base">
@@ -88,7 +88,7 @@ export default function Footer() {
 
       <div>
         <h3
-          className="mb-5 text-lg font-semibold font-[ui-serif]"
+          className="mb-5 text-lg text-primary font-dm-serif-display"
         >
           ¿Una idea especial?
         </h3>

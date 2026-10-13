@@ -9,11 +9,4 @@
 
 .carousel-gallery-left {
   animation: carousel-left 25s linear infinite;
-  &:hover{
-    animation-play-state: paused;
-  }
-}
-
-.carousel-gallery-stop{
-  animation-play-state: paused;
 }

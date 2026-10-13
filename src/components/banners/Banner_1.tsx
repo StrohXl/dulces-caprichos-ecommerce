@@ -8,7 +8,7 @@ export default function Banner1({
   children: React.ReactNode;
 }) {
   return (
-    <div className="bg-linear-to-br from-rose-400 to-rose-950 rounded-xl overflow-hidden shadow-lg">
+    <div className="bg-[#FFFCFA] border-1 border-[#EAD6DF] rounded-xl overflow-hidden shadow-lg">
       <div className="flex flex-col md:flex-row">
         <div className="md:w-1/2 relative h-48 md:h-auto md:aspect-[1.5]">
           <Image
