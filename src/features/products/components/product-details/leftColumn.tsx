@@ -8,9 +8,9 @@ export default function LeftColumn({ product }: { product: Product }) {
 
   return (
     <div className="lg:col-span-2">
-      <div className="bg-white rounded-lg p-6 py-8 mb-4 shadow-sm shadow-gray-300">
-        <div className="grid grid-cols-[100px_1fr] gap-6 md:gap-4">
-          <div className="flex md:flex-col gap-2 mt-4 md:mt-0 w-full overflow-x-auto pb-2">
+      <div className="bg-white rounded-lg p-4 py-6 md:p-6 md:py-8 mb-4 shadow-sm shadow-gray-300">
+        <div className="grid lg:grid-cols-[100px_1fr] gap-6 md:gap-4">
+          <div className="flex lg:flex-col gap-2 mt-4 md:mt-0 w-full overflow-x-auto pb-2">
             {images.map((img, index) => (
               <button
                 key={index}
@@ -25,8 +25,8 @@ export default function LeftColumn({ product }: { product: Product }) {
               </button>
             ))}
           </div>
-          <div className="relative">
-            <div className="aspect-square max-h-[500px] w-full bg-gray-100 rounded-lg overflow-hidden">
+          <div className="relative row-start-1 lg:col-start-2">
+            <div className="aspect-square max-h-[500px] relative w-full bg-gray-100 rounded-lg overflow-hidden">
               <Image
                 fill
                 src={images[selectedImage]}
@@ -39,7 +39,7 @@ export default function LeftColumn({ product }: { product: Product }) {
       </div>
 
       {/* Description */}
-      <div className="bg-white rounded-lg p-6 py-8 shadow-sm shadow-gray-300">
+      <div className="bg-white rounded-lg p-4 py-6 md:p-6 md:py-8 shadow-sm shadow-gray-300">
         <h2 className="text-xl md:text-2xl font-dm-serif-display text-primary mb-4">Descripción</h2>
         <p className="text-secondary leading-relaxed text-sm font-[inter]">{product.description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nihil aut, obcaecati molestias harum aspernatur, sint perferendis quasi assumenda quas hic ipsa maiores numquam. Atque, asperiores? Suscipit praesentium sapiente itaque?</p>
 

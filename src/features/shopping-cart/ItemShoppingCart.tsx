@@ -1,10 +1,8 @@
-'use client'
-
-import { FaMinus, FaPlus } from "react-icons/fa6";
-import { FaRegTrashAlt } from "react-icons/fa";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
+
 import {
   minusProductShoppingCart,
   plusProductShoppingCart,
@@ -12,6 +10,7 @@ import {
 } from "@/utils/shopping-cart.utils";
 import { useContextLayout } from "@/hooks/contextLayout";
 import { ProductShoppingCart } from "@/types/shopping-cart.type";
+import { FaMinus, FaPlus } from "react-icons/fa6";
 
 export default function ItemShoppingCart({
   product,
@@ -23,86 +22,101 @@ export default function ItemShoppingCart({
   return (
     <div
       key={product.id}
-      className={`grid  grid-cols-[130px_1fr_200px] gap-4  font-[ui-sans]`}
+      className={`grid grid-cols-[60px_1fr]  md:grid-cols-[130px_1fr_100px] gap-4 md:gap-6  font-[ui-sans]`}
     >
       <div className="w-full relative aspect-square rounded-lg overflow-clip">
         <Link
           href={{
-            pathname: product.name,
-            query: {
-              number: product.id,
-            },
+            pathname: `/${product.name.replace(" ", "-").toLowerCase()}`,
           }}
-          className="duration-200 hover:text-rose-800"
         >
           <Image
             src={product.image}
             fill
             alt={product.name}
-            className="rounded-full object-cover"
+            className="rounded-md object-cover"
           />
         </Link>
       </div>
       <div className="flex flex-col">
-        <h4 className="text-xl font-medium line-clamp-2 h-[56px]">
+        <h4 className="text-xl font-dm-serif-display text-primary line-clamp-2 mb-1 md:mb-2 ">
           <Link
             href={{
-              pathname: product.name,
-              query: {
-                number: product.id,
-              },
+              pathname: `/${product.name.replace(" ", "-").toLowerCase()}`,
             }}
-            className="duration-200 hover:text-rose-800"
+            className="duration-200 hover:text-secondary"
           >
             {product.name}
           </Link>
         </h4>
-        <div className="mt-auto">
-          <span className="text-3xl font-semibold font-[ui-serif] text-rose-900">
-            <span className="text-lg ">$</span>
+        <p className="text-secondary font-[inter] mb-2">
+          {product.description}
+        </p>
+        <div className="font-[inter] flex mb-1 items-center gap-2 md:hidden">
+          <div className="text-secondary">
+            <span className="">$</span>
             {product.price}
-          </span>
-        </div>
-      </div>
-      <div className="flex flex-col">
-        <div className="text-center flex gap-2 items-center justify-end">
-          <button
-            className="text-sm cursor-pointer border-1 border-gray-400 h-[30px] w-[30px] rounded-sm flex items-center justify-center"
-            onClick={() => {
-              const newList = minusProductShoppingCart({
-                idProduct: product.id,
-              });
+            <span className="ms-1">c/u</span>
+          </div>
 
-              setShoppingCart(newList);
-            }}
-          >
-            <FaMinus />
-          </button>
-          <span className="w-[30px] font-dm-sans">{product.quantity}</span>
-          <button
-            className="text-sm cursor-pointer border-1 border-gray-400 h-[30px] w-[30px] rounded-sm flex items-center justify-center"
-            onClick={() => {
-              const newList = plusProductShoppingCart({
-                idProduct: product.id,
-              });
-              setShoppingCart(newList);
-            }}
-          >
-            <FaPlus />
-          </button>
+          <div className="text-xl text-primary">
+            <span className="">$</span>
+            {product.price * product.quantity}
+          </div>
         </div>
-        <div className="text-red-500 flex justify-end text-2xl mt-auto">
-          <button
+        <div className="flex items-center gap-4 mt-2">
+          <div className="flex items-center border-1 border-gray-200 rounded-md w-fit text-primary  text-sm">
+            <button
+              onClick={() => {
+                const newList = minusProductShoppingCart({
+                  idProduct: product.id,
+                });
+
+                setShoppingCart(newList);
+              }}
+              className="px-1 outline-none ps-3  flex items-center justify-center cursor-pointer "
+            >
+              <FaMinus />
+            </button>
+            <span className="w-8 h-full py-[6px] font-dm-serif-display text-center font-medium">
+              {product.quantity}
+            </span>
+            <button
+              onClick={() => {
+                const newList = plusProductShoppingCart({
+                  idProduct: product.id,
+                });
+                setShoppingCart(newList);
+              }}
+              className="px-1 outline-none pe-3 flex items-center justify-center cursor-pointer "
+            >
+              <FaPlus />
+            </button>
+          </div>
+          |
+          <span
+            className="text-primary duration-200 hover:text-secondary font-[inter] cursor-pointer"
             onClick={() => {
               const newList = removeProductShoppingCart({
                 product,
               });
               setShoppingCart(newList);
             }}
-            className="cursor-pointer duration-200 hover:text-rose-800"
           >
-            <FaRegTrashAlt />
-          </button>
+            Eliminar
+          </span>
+        </div>
+      </div>
+      <div className="text-end font-[inter] hidden md:block">
+        <div className="text-secondary">
+          <span className="">$</span>
+          {product.price}
+          <span className="ms-1">c/u</span>
+        </div>
+
+        <div className="text-2xl text-primary">
+          <span className="">$</span>
+          {product.price * product.quantity}
         </div>
       </div>
     </div>

@@ -1,10 +1,8 @@
-import Image from "next/image";
 import BannerHero from "@/components/banners/BannerHero";
 import ContainerWidth from "@/components/ContainerWidth";
 import categories from "@/data/categories";
-import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-import { FaArrowRight } from "react-icons/fa6";
+import CardCategory from "@/features/categories/components/cards/CardCategory";
 
 export default function Categories() {
   return (
@@ -13,7 +11,7 @@ export default function Categories() {
       <section className="py-12 bg-[#FFFCFA]">
         <ContainerWidth>
           <Breadcrumb />
-          <div className="mt-6 mb-10 flex items-center justify-between">
+          <div className="mt-6 mb-10 flex flex-col gap-6 md:flex-row items-start md:items-center justify-between">
             <div>
               <h1 className="text-xl md:text-2xl lg:text-3xl font-dm-serif-display text-primary mb-2">
                 Un dulce capricho para cada ocasión
@@ -28,45 +26,10 @@ export default function Categories() {
             </span>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3   ">
-            {categories.map((category) => {
-              const IconCategory = category.icon;
-
-              return (
-                <div
-                  key={category.id}
-                  className="shadow-sm relative rounded-xl overflow-hidden flex flex-col"
-                >
-                  <div className="relative w-full aspect-[1.5]">
-                    <Image
-                      src={category.imageUrl}
-                      fill
-                      className="object-cover"
-                      alt={category.name}
-                    />
-                  </div>
-
-                  <div className="p-4 pb-6 h-full bg-white flex flex-col gap-4">
-                    <div className="grid grid-cols-[50px_1fr] items-center gap-4">
-                      <div className="w-[50px] h-[50px] bg-[#FFF3F5] rounded-md flex items-center justify-center">
-                      <IconCategory className="text-primary text-3xl" />
-                        </div>
-                      <h2 className="text-xl font-dm-serif-display text-primary">
-                        {category.name}
-                      </h2>
-                    </div>
-                    <p className="">{category.description}</p>
-                    <Link
-                      href={category.url}
-                      className="text-primary border-1 mt-auto border-primary block py-[10px] flex items-center justify-center gap-2 rounded-lg font-medium duration-200 hover:bg-primary hover:text-white"
-                    >
-                      Ver productos
-                      <FaArrowRight />
-                    </Link>
-                  </div>
-                </div>
-              );
-            })}
+          <div className="grid gap-2 md:gap-4 sm:grid-cols-2 md:grid-cols-3   ">
+            {categories.map((category) => (
+              <CardCategory key={category.id} category={category} />
+            ))}
           </div>
         </ContainerWidth>
       </section>
