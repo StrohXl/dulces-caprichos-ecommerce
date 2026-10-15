@@ -15,7 +15,7 @@ export default function HeaderNavigation() {
                 href={item.link}
               >
                 {item.title}
-                {item.children.length > 0 && (
+                {item.children && item.children.length > 0 && (
                   <div className="navigation-menu"></div>
                 )}
               </Link>
