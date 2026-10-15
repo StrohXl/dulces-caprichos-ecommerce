@@ -2,7 +2,6 @@
 
 import ContainerWidth from "@/components/ContainerWidth";
 import { useContextLayout } from "@/hooks/contextLayout";
-import EmptyShoppingCart from "@/features/shopping-cart/components/EmptyShoppingCart";
 import ShowShoppingCart from "@/features/shopping-cart/components/ShowShoppingCart";
 
 export default function ShoppingCart() {
@@ -10,11 +9,7 @@ export default function ShoppingCart() {
   return (
     <section >
       <ContainerWidth>
-        {shoppingCart.products.length > 0 ? (
-          <ShowShoppingCart shoppingCart={shoppingCart} />
-        ) : (
-          <EmptyShoppingCart />
-        )}
+           <ShowShoppingCart shoppingCart={shoppingCart} />
       </ContainerWidth>
     </section>
   );

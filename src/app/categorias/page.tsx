@@ -13,7 +13,7 @@ export default function Categories() {
       <section className="py-12 bg-[#FFFCFA]">
         <ContainerWidth>
           <Breadcrumb />
-          <div className="mt-6 mb-10 flex items-center justify-between">
+          <div className="mt-6 mb-10 flex flex-col gap-6 md:flex-row items-start md:items-center justify-between">
             <div>
               <h1 className="text-xl md:text-2xl lg:text-3xl font-dm-serif-display text-primary mb-2">
                 Un dulce capricho para cada ocasión

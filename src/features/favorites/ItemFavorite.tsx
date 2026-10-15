@@ -16,10 +16,7 @@ export default function ItemFavorite({ product }: { product: Product }) {
         <Link
           className="duration-200 hover:text-rose-800"
           href={{
-            pathname: `/${product.name}`,
-            query: {
-              number: product.id,
-            },
+            pathname: `/${product.name.replace(" ", "-").toLowerCase()}`,
           }}
         >
           <Image
@@ -33,26 +30,23 @@ export default function ItemFavorite({ product }: { product: Product }) {
       <div>
         <h4 className="text-lg">
           <Link
-            className="duration-200 hover:text-rose-800"
+            className="duration-200 text-primary hover:text-secondary font-dm-serif-display"
             href={{
-              pathname: `/${product.name}`,
-              query: {
-                number: product.id,
-              },
+              pathname: `/${product.name.replace(" ", "-").toLowerCase()}`,
             }}
           >
             {product.name}
           </Link>
         </h4>
       </div>
-      <div>${product.price}</div>
-      <div className="text-red-500 flex justify-end text-xl">
+      <div className="text-primary" >${product.price}</div>
+      <div className="text-primary flex justify-end text-xl">
         <button
           onClick={() => {
             const newList = removeProductFavorites({ product });
             setFavorites(newList);
           }}
-          className="cursor-pointer duration-200 hover:text-rose-800"
+          className="cursor-pointer duration-200 hover:text-rose-400"
         >
           <FaRegTrashAlt />
         </button>

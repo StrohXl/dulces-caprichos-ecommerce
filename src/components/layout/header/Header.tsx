@@ -1,5 +1,6 @@
 "use client";
 
+import { useCallback, useState } from "react";
 import ContainerWidth from "@/components/ContainerWidth";
 import { useContextLayout } from "@/hooks/contextLayout";
 import Link from "next/link";
@@ -8,44 +9,58 @@ import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { IoSearch } from "react-icons/io5";
 import { RiShoppingCartLine } from "react-icons/ri";
 import HeaderNavigation from "./HeaderNavigation";
+import CartDrawer from "@/features/shopping-cart/components/CartDrawer";
+import SearchBox from "@/features/products/components/search/SearchBox";
+import SearchDrawer from "@/features/products/components/search/SearchDrawer";
+import MobileMenuDrawer from "./MobileMenuDrawer";
 
 import "./css/header.css";
 import Image from "next/image";
 
 export default function Header() {
   const { shoppingCart } = useContextLayout();
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const closeCart = useCallback(() => setIsCartOpen(false), []);
+  const closeSearch = useCallback(() => setIsSearchOpen(false), []);
+  const closeMenu = useCallback(() => setIsMenuOpen(false), []);
 
   return (
     <>
-      <header
-        className={`sticky w-full top-0 left-0 bg-white z-50 shadow-sm`}
-      >
+      <header className={`sticky w-full top-0 left-0 bg-white z-50 shadow-sm`}>
         <ContainerWidth className="relative">
-          <div className="flex justify-between items-center py-3">
-            <div className="flex items-center">
+          <div className="grid grid-cols-[auto_auto_1fr] gap-6 justify-between items-center py-3">
+            <div className="flex items-center md:mr-4">
               <Link href="/" aria-label="Home" title="Inicio">
-                <Image src="/logos/isotipo-1.png" alt="dulces" width={50} height={50} />
+                <Image
+                  src="/logos/isotipo-1.png"
+                  alt="dulces"
+                  width={50}
+                  height={50}
+                />
               </Link>
             </div>
 
             <HeaderNavigation />
 
-            <div className=" flex items-center gap-8">
-              <div className="input-search font-[inter] text-sm relative hidden lg:flex">
-                <input
-                  className={` px-4 bg-transparent border-1 border-gray-300 pl-5 py-[10px] outline-none rounded-full`}
-                  type="text"
-                  placeholder="Buscar productos..."
-                />
-                <button className="cursor-pointer text-primary absolute top-[50%] translate-y-[-50%] right-[20px] ">
-                  <IoSearch />
-                </button>
-              </div>
+            <div>
+              <div className="flex items-center justify-end gap-6 text-2xl md:text-2xl text-primary">
+                <div className="input-search relative hidden w-full max-w-[325px] lg:flex">
+                  <SearchBox />
+                </div>
 
-              <div className="flex items-center lg:gap-6 gap-4 text-2xl md:text-2xl text-primary">
-                <button className="cursor-pointer lg:hidden ">
+                <button
+                  type="button"
+                  onClick={() => setIsSearchOpen(true)}
+                  aria-label="Buscar productos"
+                  aria-expanded={isSearchOpen}
+                  aria-controls="search-drawer"
+                  className="cursor-pointer lg:hidden"
+                >
                   <IoSearch />
                 </button>
+
                 <Link
                   title="Lista de favoritos"
                   aria-label="Favoritos"
@@ -54,11 +69,15 @@ export default function Header() {
                 >
                   <FaRegHeart />
                 </Link>
-                <Link
-                  href={"/shopping-cart"}
+
+                <button
+                  type="button"
+                  onClick={() => setIsCartOpen(true)}
                   aria-label="Carrito"
                   title="Carrito de compras"
-                  className="cursor-pointer hidden outline-none relative md:flex"
+                  aria-expanded={isCartOpen}
+                  aria-controls="cart-drawer"
+                  className="cursor-pointer outline-none relative"
                 >
                   <RiShoppingCartLine />
                   {shoppingCart.products.length > 0 && (
@@ -69,8 +88,16 @@ export default function Header() {
                       )}
                     </span>
                   )}
-                </Link>
-                <button className="cursor-pointer md:hidden">
+                </button>
+                
+                <button
+                  type="button"
+                  onClick={() => setIsMenuOpen(true)}
+                  aria-label="Abrir menú"
+                  aria-expanded={isMenuOpen}
+                  aria-controls="mobile-menu-drawer"
+                  className="cursor-pointer md:hidden"
+                >
                   <HiOutlineMenuAlt1 className="rotate-180" />
                 </button>
               </div>
@@ -78,6 +105,13 @@ export default function Header() {
           </div>
         </ContainerWidth>
       </header>
+      <CartDrawer
+        isCartOpen={isCartOpen}
+        shoppingCart={shoppingCart}
+        onClose={closeCart}
+      />
+      <SearchDrawer isOpen={isSearchOpen} onClose={closeSearch} />
+      <MobileMenuDrawer isOpen={isMenuOpen} onClose={closeMenu} />
     </>
   );
 }

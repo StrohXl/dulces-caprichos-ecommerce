@@ -21,7 +21,7 @@ export default function ProductDetailClient({
           <Breadcrumb />
         </div>
         <div className="py-6 pb-10">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-[1fr_300px] lg:grid-cols-3 ">
             <LeftColumn product={product} />
             <RightColumn product={product} />
           </div>

@@ -11,6 +11,7 @@ import {
 } from "@/utils/favorites.utils";
 import categories from "@/data/categories";
 import { addProductToShoppingCart } from "@/utils/shopping-cart.utils";
+import Link from "next/link";
 
 export default function RightColumn({ product }: { product: Product }) {
   const [quantity, setQuantity] = useState(1);
@@ -18,11 +19,14 @@ export default function RightColumn({ product }: { product: Product }) {
 
   return (
     <div className="lg:col-span-1">
-      <div className="bg-white rounded-lg p-6 py-8 sticky shadow-sm shadow-gray-300 top-[100px] font-[inter]">
+      <div className="bg-white rounded-lg p-4 md:p-6 sticky shadow-sm shadow-gray-300 top-[100px] font-[inter]">
         <div className="flex justify-between mb-4 ">
-          <span className="text-secondary">
-            {categories.find((item) => item.id == product.id)?.name}
-          </span>
+          <Link
+          
+          href={ categories.find((item) => item.id === product.category)?.url?? '/'}
+          className="text-secondary">
+            {categories.find((item) => item.id === product.category)?.name}
+          </Link>
           {!favorites.some((item) => item.id == product.id) ? (
             <button
               onClick={() => {

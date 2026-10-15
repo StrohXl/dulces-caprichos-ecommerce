@@ -3,13 +3,13 @@ import { FaRegHeart } from "react-icons/fa6";
 export default function EmptyFavorites() {
   return (
     <div className="flex flex-col items-center gap-6">
-      <h1 className="text-2xl md:text-3xl text-rose-900 font-[ui-sans]">
-        Lista de Favoritos
-      </h1>
       <div>
-        <FaRegHeart className="text-6xl text-gray-500 mb-4 mx-auto" />
-        <p className="text-sm text-gray-600">
-          Tu lista de favoritos está vacía.
+        <FaRegHeart className="text-5xl text-primary mb-4 mx-auto" />
+        <p className="font-dm-serif-display text-xl text-primary">
+          Tu lista de favoritos está vacía
+        </p>
+        <p className="mt-2 text-sm text-secondary">
+          Agrega tus dulces favoritos para continuar.
         </p>
       </div>
     </div>

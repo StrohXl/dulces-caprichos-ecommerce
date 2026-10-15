@@ -2,16 +2,14 @@ import { RiShoppingCartLine } from "react-icons/ri";
 
 export default function EmptyShoppingCart() {
   return (
-    <div className="flex flex-col items-center gap-6">
-      <h1 className="text-2xl md:text-3xl text-rose-900 font-[ui-sans]">
-        Carrito de compras
-      </h1>
-      <div >
-        <RiShoppingCartLine className="text-6xl text-gray-500 mb-4 mx-auto" />
-        <p className="text-sm text-gray-600">
-          Tu carrito de compras está vacío.
-        </p>
-      </div>
+    <div className="flex flex-1 flex-col items-center justify-center px-6 text-center">
+      <RiShoppingCartLine className="mb-4 text-5xl text-primary" />
+      <p className="font-dm-serif-display text-xl text-primary">
+        Tu carrito está vacío
+      </p>
+      <p className="mt-2 text-sm text-secondary">
+        Agrega tus dulces favoritos para continuar.
+      </p>
     </div>
   );
 }

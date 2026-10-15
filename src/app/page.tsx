@@ -5,6 +5,7 @@ import Banner1 from "../components/banners/Banner_1";
 import ButtonEffect from "../components/buttons/ButtonEffect";
 import Hero from "../features/home/sections/Hero";
 import SwiperCategories from "../features/home/sections/SwiperCategories";
+import SwiperProducts from "@/features/products/components/swiper/SwiperProducts";
 
 export default function Home() {
   return (
@@ -13,8 +14,8 @@ export default function Home() {
 
       <SwiperCategories />
 
-      <div className="bg-[#FFFCFA] py-12" >
-        <section className="mb-12">
+      <div className="bg-[#FFFCFA] py-12">
+        <section className="mb-4 lg:mb-12">
           <ContainerWidth>
             <div className="">
               <div className="flex items-center justify-between mb-8">
@@ -22,13 +23,8 @@ export default function Home() {
                   Productos de la semana
                 </h2>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {products.map(
-                  (product, index) =>
-                    index < 4 && (
-                      <CardProduct key={product.id} product={product} />
-                    ),
-                )}
+              <div>
+                <SwiperProducts products={products.slice(0, 4)} />
               </div>
             </div>
           </ContainerWidth>
@@ -65,14 +61,8 @@ export default function Home() {
                   Productos de la semana
                 </h2>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {products.map(
-                  (product, index) =>
-                    index >= 4 &&
-                    index < 12 && (
-                      <CardProduct key={product.id} product={product} />
-                    ),
-                )}
+              <div>
+                <SwiperProducts products={products.slice(4, 12)} />
               </div>
             </div>
           </ContainerWidth>

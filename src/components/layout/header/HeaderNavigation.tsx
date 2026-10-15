@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function HeaderNavigation() {
   return (
-    <nav className="mr-auto ms-12 links-navigation">
+    <nav className="mr-auto links-navigation">
       <div className="hidden ms-auto md:flex items-center space-x-8">
         <nav className="space-x-8">
           {navegation.map((item) => {
