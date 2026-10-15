@@ -4,7 +4,7 @@ import EmptyFavorites from "./EmptyFavorites";
 
 export default function ShowFavorites({ favorites }: { favorites: Product[] }) {
   return (
-    <div className="bg-white p-6 rounded-lg max-w-[827.2px]">
+    <div className="bg-white p-4 md:p-6 rounded-lg max-w-[827.2px]">
       <h1 className="text-2xl md:text-3xl text-primary font-dm-serif-display mb-4">
         Lista de Favoritos
       </h1>

@@ -36,7 +36,7 @@ export default function CardProduct({ product }: { product: Product }) {
         </Link>
         <ButtonHeart heartActive={heartActive} product={product} setFavorites={setFavorites} />
       </div>
-      <div className="pt-4 bg-white border-x-1 flex-1 border-x-primary/50 border-b-4 font-dm-serif-display border-primary rounded-b-xl p-2 md:p-4 flex flex-col">
+      <div className="pt-2 bg-white border-x-1 flex-1 border-x-primary/50 border-b-4 font-dm-serif-display border-primary rounded-b-xl p-2 md:p-4 flex flex-col">
         
         <h4 className="text-primary md:text-lg md:text-xl line-clamp-2 mb-2">
           <Link

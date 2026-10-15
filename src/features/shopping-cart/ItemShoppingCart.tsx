@@ -22,7 +22,7 @@ export default function ItemShoppingCart({
   return (
     <div
       key={product.id}
-      className={`grid  grid-cols-[130px_1fr_100px] gap-6  font-[ui-sans]`}
+      className={`grid grid-cols-[60px_1fr]  md:grid-cols-[130px_1fr_100px] gap-4 md:gap-6  font-[ui-sans]`}
     >
       <div className="w-full relative aspect-square rounded-lg overflow-clip">
         <Link
@@ -34,12 +34,12 @@ export default function ItemShoppingCart({
             src={product.image}
             fill
             alt={product.name}
-            className="rounded-full object-cover"
+            className="rounded-md object-cover"
           />
         </Link>
       </div>
       <div className="flex flex-col">
-        <h4 className="text-xl font-dm-serif-display text-primary line-clamp-2 mb-2 ">
+        <h4 className="text-xl font-dm-serif-display text-primary line-clamp-2 mb-1 md:mb-2 ">
           <Link
             href={{
               pathname: `/${product.name.replace(" ", "-").toLowerCase()}`,
@@ -52,6 +52,18 @@ export default function ItemShoppingCart({
         <p className="text-secondary font-[inter] mb-2">
           {product.description}
         </p>
+        <div className="font-[inter] flex mb-1 items-center gap-2 md:hidden">
+          <div className="text-secondary">
+            <span className="">$</span>
+            {product.price}
+            <span className="ms-1">c/u</span>
+          </div>
+
+          <div className="text-xl text-primary">
+            <span className="">$</span>
+            {product.price * product.quantity}
+          </div>
+        </div>
         <div className="flex items-center gap-4 mt-2">
           <div className="flex items-center border-1 border-gray-200 rounded-md w-fit text-primary  text-sm">
             <button
@@ -95,7 +107,7 @@ export default function ItemShoppingCart({
           </span>
         </div>
       </div>
-      <div className="text-end font-[inter] ">
+      <div className="text-end font-[inter] hidden md:block">
         <div className="text-secondary">
           <span className="">$</span>
           {product.price}

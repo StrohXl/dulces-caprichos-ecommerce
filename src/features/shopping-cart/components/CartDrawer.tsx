@@ -84,7 +84,13 @@ export default function CartDrawer({
                   <div className="flex min-w-0 flex-1 flex-col">
                     <div className="flex items-start justify-between gap-3">
                       <h3 className="line-clamp-2 font-dm-serif-display text-lg leading-tight text-primary">
-                        {product.name}
+                        <Link
+                          href={{
+                            pathname: `/${product.name.replace(" ", "-").toLowerCase()}`,
+                          }}
+                        >
+                          {product.name}
+                        </Link>
                       </h3>
                       <span className="shrink-0 font-[inter] text-sm font-semibold text-primary">
                         ${product.price * product.quantity}
@@ -93,7 +99,7 @@ export default function CartDrawer({
                     <p className="mt-1 line-clamp-1 text-sm text-secondary">
                       ${product.price} c/u
                     </p>
-                    <div className="mt-auto flex items-center justify-between pt-3">
+                    <div className="mt-auto flex items-center gap-4 pt-3">
                       <div className="flex items-center rounded-md border border-gray-200 text-primary">
                         <button
                           type="button"
@@ -127,18 +133,18 @@ export default function CartDrawer({
                           <FaPlus className="text-xs" />
                         </button>
                       </div>
-                      <button
-                        type="button"
-                        onClick={() =>
-                          setShoppingCart(
-                            removeProductShoppingCart({ product }),
-                          )
-                        }
-                        aria-label={`Eliminar ${product.name} del carrito`}
-                        className="p-2 text-secondary cursor-pointer transition hover:text-primary"
+                      |
+                      <span
+                        className="text-primary duration-200 hover:text-secondary font-[inter] cursor-pointer"
+                        onClick={() => {
+                          const newList = removeProductShoppingCart({
+                            product,
+                          });
+                          setShoppingCart(newList);
+                        }}
                       >
-                        <RiDeleteBinLine className="text-lg" />
-                      </button>
+                        Eliminar
+                      </span>
                     </div>
                   </div>
                 </li>
@@ -149,8 +155,10 @@ export default function CartDrawer({
           <EmptyShoppingCart />
         )}
         <div className="border-t border-gray-200 px-4 py-5 mt-4 flex justify-between">
-          <span >Total:</span>
-          <span className="font-bold text-primary font-[inter]">${shoppingCart.totalPrice.toFixed(2)}</span>
+          <span>Total:</span>
+          <span className="font-bold text-primary font-[inter]">
+            ${shoppingCart.totalPrice.toFixed(2)}
+          </span>
         </div>
 
         <div className="border-t border-gray-200 px-4 py-5">

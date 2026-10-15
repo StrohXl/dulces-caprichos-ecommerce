@@ -15,16 +15,16 @@ export default function ShowShoppingCart({
 
   return (
     <div className="grid md:grid-cols-[1fr_30%] gap-6 pt-4">
-      <div className="bg-white rounded-lg p-6">
+      <div className="bg-white rounded-lg p-4 md:p-6">
         <h1 className="text-2xl md:text-3xl text-primary font-dm-serif-display ">
           Carrito de compras
         </h1>
         {quantity > 0 ? (
           <>
-            <div className="flex justify-end font-[inter] mb-2">
+            <div className="hidden md:flex justify-end font-[inter]">
               <span>Precio</span>
             </div>
-            <div className="flex flex-col gap-4 border-t-1 border-gray-300">
+            <div className="flex flex-col gap-4 border-t-1 mt-2 border-gray-300">
               {shoppingCart.products.map((product, index) => {
                 return (
                   <div

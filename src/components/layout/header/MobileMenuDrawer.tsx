@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { FaXmark } from "react-icons/fa6";
-import navegation from "@/data/navegation";
+import menuMobile from "@/const/menuMobile";
 
 export default function MobileMenuDrawer({
   isOpen,
@@ -33,7 +33,7 @@ export default function MobileMenuDrawer({
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between border-b border-gray-200 px-5 py-5">
+        <div className="flex items-center justify-between border-b border-gray-200 px-5 py-3">
           <h2
             id="mobile-menu-title"
             className="font-dm-serif-display text-2xl text-primary"
@@ -51,36 +51,18 @@ export default function MobileMenuDrawer({
         </div>
 
         <nav aria-label="Navegación principal" className="flex-1 px-5 py-4">
-          <ul className="divide-y divide-gray-100 text-xl">
-            <li>
-              <Link
-                href="/"
-                onClick={onClose}
-                className="block py-4 font-dm-serif-display text-primary transition-colors hover:text-rose-500"
-              >
-                Inicio
-              </Link>
-            </li>
-            {navegation.map((item) => (
+          <ul className="divide-y divide-gray-100 text-2xl font-[inter]">
+            {menuMobile.map((item) => (
               <li key={item.link}>
                 <Link
                   href={item.link}
                   onClick={onClose}
-                  className="block py-4 font-dm-serif-display text-primary transition-colors hover:text-rose-500"
+                  className="block py-4 text-secondary duration-200 hover:text-primary"
                 >
                   {item.title}
                 </Link>
               </li>
             ))}
-            <li>
-              <Link
-                href="/favoritos"
-                onClick={onClose}
-                className="block py-4 font-dm-serif-display text-primary transition-colors hover:text-rose-500"
-              >
-                Favoritos
-              </Link>
-            </li>
           </ul>
         </nav>
 

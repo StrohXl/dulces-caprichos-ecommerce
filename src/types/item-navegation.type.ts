@@ -1,7 +1,7 @@
 export type ItemNavegation = {
   link: string;
   title: string;
-  children: {
+  children?: {
     link: string;
     title: string;
   }[];
