@@ -1,6 +1,7 @@
 import CardProduct from "@/features/products/components/cards/CardProduct";
 import { Product } from "@/types/product.type";
 import { useContextLayout } from "@/hooks/contextLayout";
+import SwiperProducts from "../swiper/SwiperProducts";
 
 export default function RelatedProducts({
   product,
@@ -16,19 +17,12 @@ export default function RelatedProducts({
   );
 
   return (
-    <div >
+    <div>
       <h2 className="text-xl font-dm-serif-display text-primary md:text-2xl lg:text-3xl mb-8">
         Productos relacionados
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {relatedProducts.map((producto) => {
-          return (
-            <CardProduct
-              key={producto.id}
-              product={producto}
-            />
-          );
-        })}
+      <div>
+        <SwiperProducts products={relatedProducts} />
       </div>
     </div>
   );

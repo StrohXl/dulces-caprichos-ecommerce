@@ -20,8 +20,8 @@ export default function CardProduct({ product }: { product: Product }) {
   const heartActive = !favorites.some((item) => item.id == product.id);
 
   return (
-    <div>
-      <div className="card-media  w-full rounded-t-xl aspect-[1.3] relative overflow-hidden group">
+    <div className="h-full flex flex-col" >
+      <div className="card-media  w-full rounded-t-xl aspect-[1.2] relative overflow-hidden group">
         <Link
           href={{
             pathname: `/${pathname}`,
@@ -36,9 +36,9 @@ export default function CardProduct({ product }: { product: Product }) {
         </Link>
         <ButtonHeart heartActive={heartActive} product={product} setFavorites={setFavorites} />
       </div>
-      <div className="pt-4 bg-white border-x-1 border-x-primary/50 border-b-4 font-dm-serif-display border-primary rounded-b-xl p-4">
+      <div className="pt-4 bg-white border-x-1 flex-1 border-x-primary/50 border-b-4 font-dm-serif-display border-primary rounded-b-xl p-2 md:p-4 flex flex-col">
         
-        <h4 className="text-primary text-lg md:text-xl line-clamp-2 mb-2 min-h-[2.5rem]">
+        <h4 className="text-primary md:text-lg md:text-xl line-clamp-2 mb-2">
           <Link
             href={{
               pathname: `/${product.name.replace(" ", "-").toLowerCase()}`,
@@ -48,13 +48,13 @@ export default function CardProduct({ product }: { product: Product }) {
           </Link>
         </h4>
 
-        <p className="text-sm text-secondary mb-4 line-clamp-3 font-dm-sans">
+        <p className="text-sm text-secondary mb-2 md:mb-4 line-clamp-3 font-dm-sans">
           {product.description}
         </p>
 
-        <div className="text-primary font-dm-serif-display">
-          <span className="text-3xl">$</span>
-          <span className="text-3xl">{product.price}</span>
+        <div className="text-primary font-dm-serif-display  mt-auto  text-xl md:text-2xl lg:text-3xl mb-2 md:mb-4">
+          <span>$</span>
+          <span>{product.price}</span>
         </div>
 
 
@@ -65,7 +65,7 @@ export default function CardProduct({ product }: { product: Product }) {
             });
             setShoppingCart(newList);
           }}
-          className="w-full py-2 border-primary mt-4 duration-200 hover:bg-primary hover:text-white flex items-center gap-2 justify-center  text-primary cursor-pointer border-1 text-center rounded-md"
+          className="w-full py-[6px] border-primaryduration-200 hover:bg-primary hover:text-white flex items-center gap-2 justify-center  text-primary cursor-pointer border-1 text-center rounded-md text-sm md:py-2 font-[inter]"
         >
           Agregar al carrito{" "}
           <RiShoppingCartLine className="text-lg hidden sm:flex" />

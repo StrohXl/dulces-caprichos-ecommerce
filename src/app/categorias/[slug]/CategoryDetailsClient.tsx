@@ -56,7 +56,7 @@ export default function CategoryDetailsClient({
               </div>
             )}
             {productsCategory.length > 0 && (
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4">
                 {productsCategory.map((product) => (
                   <CardProduct key={product.id} product={product} />
                 ))}

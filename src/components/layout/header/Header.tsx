@@ -65,7 +65,7 @@ export default function Header() {
                   title="Lista de favoritos"
                   aria-label="Favoritos"
                   href={"/favoritos"}
-                  className="cursor-pointer hidden md:flex"
+                  className="cursor-pointer"
                 >
                   <FaRegHeart />
                 </Link>
